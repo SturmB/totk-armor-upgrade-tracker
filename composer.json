@@ -1,0 +1,82 @@
+{
+    "name": "sturm/armor-upgrade-tracker",
+    "type": "project",
+    "description": "An armor upgrade tracker for \"The Legend of Zelda: Breath of the Wild\"",
+    "keywords": [
+        "armor",
+        "botw",
+        "tracker",
+        "upgrade",
+        "zelda"
+    ],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Chris McGee",
+            "email": "chris@chrismcgee.info"
+        }
+    ],
+    "require": {
+        "php": "^8.1.7",
+        "fakerphp/faker": "^1.9.1",
+        "guzzlehttp/guzzle": "^7.2",
+        "jantinnerezo/livewire-range-slider": "^1.0",
+        "laravel/framework": "^9.19",
+        "laravel/jetstream": "^3.0",
+        "laravel/sanctum": "^2.14.1",
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.5",
+        "spatie/laravel-backup": "^8.1",
+        "symfony/http-client": "^6.2",
+        "symfony/postmark-mailer": "^6.2"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
+        "beyondcode/laravel-query-detector": "^1.6",
+        "krlove/eloquent-model-generator": "^2.0",
+        "laravel/sail": "^1.0.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
