@@ -1,4 +1,4 @@
-## The Legend of Zelda: Breath of the Wild Armor Upgrade Tracker
+## The Legend of Zelda: Tears of the Kingdom Armor Upgrade Tracker
 
 This tracker is designed as a tool to help you keep track of the resources you need to obtain in order to upgrade various armors to specific levels.
 
@@ -6,7 +6,7 @@ Simply make sure the armor you wish to track is checked, then adjust the slider 
 
 ### Contributing
 
-Please file all bug reports, issues, and feature requests using the [Issues](https://github.com/SturmB/botw-armor-upgrade-tracker/issues) tab above.
+Please file all bug reports, issues, and feature requests using the [Issues](https://github.com/SturmB/totk-armor-upgrade-tracker/issues) tab above.
 
 ### TODO
 

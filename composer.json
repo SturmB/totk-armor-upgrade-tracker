@@ -1,10 +1,10 @@
 {
-    "name": "sturm/armor-upgrade-tracker",
+    "name": "sturm/totk-armor-upgrade-tracker",
     "type": "project",
-    "description": "An armor upgrade tracker for \"The Legend of Zelda: Breath of the Wild\"",
+    "description": "An armor upgrade tracker for \"The Legend of Zelda: Tears of the Kingdom\"",
     "keywords": [
         "armor",
-        "botw",
+        "totk",
         "tracker",
         "upgrade",
         "zelda"
