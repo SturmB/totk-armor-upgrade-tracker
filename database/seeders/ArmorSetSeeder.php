@@ -68,6 +68,7 @@ class ArmorSetSeeder extends Seeder
             ],
             [
                 "name" => "Fierce Deity Set",
+                "image" => null,
             ],
             [
                 "name" => "Radiant Set",
@@ -83,21 +84,27 @@ class ArmorSetSeeder extends Seeder
             ],
             [
                 "name" => "Hero of Time Set",
+                "image" => null,
             ],
             [
                 "name" => "Hero of Winds Set",
+                "image" => null,
             ],
             [
                 "name" => "Hero of Twilight Set",
+                "image" => null,
             ],
             [
                 "name" => "Hero of the Sky Set",
+                "image" => null,
             ],
             [
                 "name" => "Hero Set",
+                "image" => null,
             ],
             [
                 "name" => "Hero of the Wild Set",
+                "image" => null,
             ],
             [
                 "name" => "Tingle's Set",
@@ -105,6 +112,7 @@ class ArmorSetSeeder extends Seeder
             ],
             [
                 "name" => "Phantom Equipment",
+                "image" => null,
             ],
             [
                 "name" => "Royal Guard Set",
@@ -112,14 +120,14 @@ class ArmorSetSeeder extends Seeder
             ],
             [
                 "name" => "Phantom Ganon Set",
+                "image" => null,
             ],
             [
                 "name" => "Salvager's Set",
+                "image" => null,
             ],
         ];
 
-        foreach ($armorSets as $armorSet) {
-            ArmorSet::create($armorSet);
-        }
+        ArmorSet::upsert($armorSets, ['name'], ['image']);
     }
 }
