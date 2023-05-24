@@ -47,6 +47,7 @@ class ArmorSeeder extends Seeder
         $phantomGanonSet = ArmorSet::where("name", "Phantom Ganon Set")->first()->id;
         $salvagersSet = ArmorSet::where("name", "Salvager's Set")->first()->id;
         $glideSet = ArmorSet::where("name", "Glide Set")->first()->id;
+        $archaicSet = ArmorSet::where("name", "Archaic Set")->first()->id;
 
         $armors = [
             [
@@ -702,6 +703,30 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Glide_Tights_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $glideSet,
+            ],
+            [
+                "name" => "Ancient Hero's Aspect",
+                "image" => "$prefix/TotK_Ancient_Hero's_Aspect_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Archaic Tunic",
+                "image" => "$prefix/TotK_Archaic_Tunic_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $archaicSet,
+            ],
+            [
+                "name" => "Archaic Legwear",
+                "image" => "$prefix/TotK_Archaic_Legwear_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $archaicSet,
+            ],
+            [
+                "name" => "Archaic Warm Greaves",
+                "image" => "$prefix/TotK_Archaic_Warm_Greaves_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $archaicSet,
             ],
         ];
 

@@ -130,6 +130,10 @@ class ArmorSetSeeder extends Seeder
                 "name" => "Glide Set",
                 "image" => null,
             ],
+            [
+                "name" => "Archaic Set",
+                "image" => null,
+            ],
         ];
 
         ArmorSet::upsert($armorSets, ['name'], ['image']);
