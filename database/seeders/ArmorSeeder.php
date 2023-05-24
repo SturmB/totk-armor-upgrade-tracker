@@ -46,6 +46,7 @@ class ArmorSeeder extends Seeder
         $royalGuardSet = ArmorSet::where("name", "Royal Guard Set")->first()->id;
         $phantomGanonSet = ArmorSet::where("name", "Phantom Ganon Set")->first()->id;
         $salvagersSet = ArmorSet::where("name", "Salvager's Set")->first()->id;
+        $glideSet = ArmorSet::where("name", "Glide Set")->first()->id;
 
         $armors = [
             [
@@ -683,6 +684,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/BotW_Salvager_Trousers_Icon.png",
                 "upgradable" => 0,
                 "armor_set_id" => $salvagersSet,
+            ],
+            [
+                "name" => "Glide Mask",
+                "image" => "$prefix/TotK_Glide_Mask_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $glideSet,
+            ],
+            [
+                "name" => "Glide Shirt",
+                "image" => "$prefix/TotK_Glide_Shirt_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $glideSet,
+            ],
+            [
+                "name" => "Glide Tights",
+                "image" => "$prefix/TotK_Glide_Tights_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $glideSet,
             ],
         ];
 

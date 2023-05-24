@@ -342,6 +342,22 @@ class ResourceSeeder extends Seeder
                 "name" => "Giant Ancient Core",
                 "image" => "$prefix/BotW_Giant_Ancient_Core_Icon.png",
             ],
+            [
+                "name" => "Aerocuda Wing",
+                "image" => "$prefix/TotK_Aerocuda_Wing_Icon.png",
+            ],
+            [
+                "name" => "Aerocuda Eyeball",
+                "image" => "$prefix/TotK_Aerocuda_Eyeball_Icon.png",
+            ],
+            [
+                "name" => "Gibdo Wing",
+                "image" => "$prefix/TotK_Gibdo_Wing_Icon.png",
+            ],
+            [
+                "name" => "Gleeok Wing",
+                "image" => "$prefix/TotK_Gleeok_Wing_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

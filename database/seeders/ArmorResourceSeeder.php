@@ -90,6 +90,9 @@ class ArmorResourceSeeder extends Seeder
         $vahMedohDivineHelm = Armor::where("name", "Vah Medoh Divine Helm")->first()->id;
         $vahRudaniaDivineHelm = Armor::where("name", "Vah Rudania Divine Helm")->first()->id;
         $vahNaborisDivineHelm = Armor::where("name", "Vah Naboris Divine Helm")->first()->id;
+        $glideMask = Armor::where("name", "Glide Mask")->first()->id;
+        $glideShirt = Armor::where("name", "Glide Shirt")->first()->id;
+        $glideTights = Armor::where("name", "Glide Tights")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -173,6 +176,10 @@ class ArmorResourceSeeder extends Seeder
         $ancientShaft = Resource::where("name", "Ancient Shaft")->first()->id;
         $ancientCore = Resource::where("name", "Ancient Core")->first()->id;
         $giantAncientCore = Resource::where("name", "Giant Ancient Core")->first()->id;
+        $aerocudaEyeball = Resource::where("name", "Aerocuda Eyeball")->first()->id;
+        $aerocudaWing = Resource::where("name", "Aerocuda Wing")->first()->id;
+        $gibdoWing = Resource::where("name", "Gibdo Wing")->first()->id;
+        $gleeokWing = Resource::where("name", "Gleeok Wing")->first()->id;
 
         $armorResources = new Collection();
 
@@ -740,6 +747,27 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($vahNaborisDivineHelm, $divineHelmData),
+        );
+
+        // Glide Set
+        $glideData = collect([
+            [1, $keeseWing, 3],
+            [2, $aerocudaWing, 5],
+            [2, $aerocudaEyeball, 6],
+            [3, $aerocudaWing, 6],
+            [3, $aerocudaEyeball, 8],
+            [4, $aerocudaWing, 10],
+            [4, $gibdoWing, 8],
+            [4, $gleeokWing, 12],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($glideMask, $glideData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($glideShirt, $glideData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($glideTights, $glideData),
         );
 
         // Populate the database.
