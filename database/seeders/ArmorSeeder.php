@@ -48,6 +48,7 @@ class ArmorSeeder extends Seeder
         $salvagersSet = ArmorSet::where("name", "Salvager's Set")->first()->id;
         $glideSet = ArmorSet::where("name", "Glide Set")->first()->id;
         $archaicSet = ArmorSet::where("name", "Archaic Set")->first()->id;
+        $froggySet = ArmorSet::where("name", "Froggy Set")->first()->id;
 
         $armors = [
             [
@@ -727,6 +728,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Archaic_Warm_Greaves_Icon.png",
                 "upgradable" => 0,
                 "armor_set_id" => $archaicSet,
+            ],
+            [
+                "name" => "Froggy Hood",
+                "image" => "$prefix/TotK_Froggy_Hood_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $froggySet,
+            ],
+            [
+                "name" => "Froggy Sleeve",
+                "image" => "$prefix/TotK_Froggy_Sleeve_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $froggySet,
+            ],
+            [
+                "name" => "Froggy Leggings",
+                "image" => "$prefix/TotK_Froggy_Leggings_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $froggySet,
             ],
         ];
 

@@ -93,6 +93,9 @@ class ArmorResourceSeeder extends Seeder
         $glideMask = Armor::where("name", "Glide Mask")->first()->id;
         $glideShirt = Armor::where("name", "Glide Shirt")->first()->id;
         $glideTights = Armor::where("name", "Glide Tights")->first()->id;
+        $froggyHood = Armor::where("name", "Froggy Hood")->first()->id;
+        $froggySleeve = Armor::where("name", "Froggy Sleeve")->first()->id;
+        $froggyLeggings = Armor::where("name", "Froggy Leggings")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -180,6 +183,8 @@ class ArmorResourceSeeder extends Seeder
         $aerocudaWing = Resource::where("name", "Aerocuda Wing")->first()->id;
         $gibdoWing = Resource::where("name", "Gibdo Wing")->first()->id;
         $gleeokWing = Resource::where("name", "Gleeok Wing")->first()->id;
+        $stickyLizard = Resource::where("name", "Sticky Lizard")->first()->id;
+        $horriblinHorn = Resource::where("name", "Horriblin Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -768,6 +773,22 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($glideTights, $glideData),
+        );
+
+        // Froggy Set
+        $froggyData = collect([
+            [1, $stickyLizard, 3],
+            [2, $stickyLizard, 5],
+            [2, $horriblinHorn, 5],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($froggyHood, $froggyData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($froggySleeve, $froggyData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($froggyLeggings, $froggyData),
         );
 
         // Populate the database.
