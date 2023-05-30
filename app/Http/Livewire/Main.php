@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Armor;
 use App\Models\ArmorSet;
 use App\Services\TrackingService;
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
@@ -17,6 +18,7 @@ class Main extends Component
     public Collection $filteredArmors;
     public string $searchTerm = "";
     public Collection $tracks;
+    public Collection $defaultRequirements;
 
     protected $listeners = ["searchArmors"];
 
@@ -42,6 +44,8 @@ class Main extends Component
         );
         $this->filteredArmors = collect();
         $this->tracks = collect($service->getAllTracking());
+        $this->defaultRequirements = $service->formattedDefaults();
+        Debugbar::log($this->defaultRequirements->get(100));
     }
 
     public function render(): View

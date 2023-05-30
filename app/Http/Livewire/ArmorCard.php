@@ -3,7 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Armor;
+use App\Models\Requirement;
 use App\Services\TrackingService;
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -12,10 +14,6 @@ class ArmorCard extends Component
     public array $tierSliderOptions = [
         "start" => [1, 4],
         "step" => 1,
-        "range" => [
-            "min" => [1],
-            "max" => [4],
-        ],
         "connect" => true,
         "behaviour" => "tap-drag",
         "pips" => [
@@ -29,6 +27,7 @@ class ArmorCard extends Component
     public array $range;
     public bool $isActive;
     public array|null $trackingData = null;
+    public Requirement|null $defaultData = null;
 
     protected $listeners = ["setActive"];
 
@@ -39,6 +38,21 @@ class ArmorCard extends Component
 
     public function mount(): void
     {
+//        Debugbar::log('defaultData: ', $this->defaultData);
+//        Debugbar::log('end: ', $this->defaultData->tracking_tier_end);
+        if ($this->defaultData) {
+            $this->tierSliderOptions["range"] = [
+                "min" => [$this->defaultData->tracking_tier_start],
+                "max" => [$this->defaultData->tracking_tier_end],
+            ];
+        } else {
+            Debugbar::log($this->armor->name);
+            $this->tierSliderOptions["range"] = [
+                "min" => [1],
+                "max" => [4],
+            ];
+        }
+
         if ($this->trackingData) {
             $this->tierSliderOptions["start"] = [
                 $this->trackingData["tracking_tier_start"],

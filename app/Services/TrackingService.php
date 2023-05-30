@@ -99,7 +99,7 @@ class TrackingService
         }
     }
 
-    private function trackingDefaults(): Collection
+    public function trackingDefaults(): Collection
     {
         return Cache::rememberForever(
             'tracking:defaults',
@@ -111,7 +111,7 @@ class TrackingService
         );
     }
 
-    private function formattedDefaults(): Collection
+    public function formattedDefaults(): Collection
     {
         return Cache::rememberForever(
             'tracking:formatted',
