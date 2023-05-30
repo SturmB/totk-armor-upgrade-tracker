@@ -366,6 +366,22 @@ class ResourceSeeder extends Seeder
                 "name" => "Horriblin Horn",
                 "image" => "$prefix/TotK_Horriblin_Horn_Icon.png",
             ],
+            [
+                "name" => "Blue Horriblin Horn",
+                "image" => "$prefix/TotK_Blue_Horriblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Black Horriblin Horn",
+                "image" => "$prefix/TotK_Black_Horriblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Horriblin Guts",
+                "image" => "$prefix/TotK_Horriblin_Guts_Icon.png",
+            ],
+            [
+                "name" => "Sticky Frog",
+                "image" => "$prefix/TotK_Sticky_Frog_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

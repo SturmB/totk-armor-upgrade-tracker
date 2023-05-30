@@ -185,6 +185,10 @@ class ArmorResourceSeeder extends Seeder
         $gleeokWing = Resource::where("name", "Gleeok Wing")->first()->id;
         $stickyLizard = Resource::where("name", "Sticky Lizard")->first()->id;
         $horriblinHorn = Resource::where("name", "Horriblin Horn")->first()->id;
+        $blueHorriblinHorn = Resource::where("name", "Blue Horriblin Horn")->first()->id;
+        $blackHorriblinHorn = Resource::where("name", "Black Horriblin Horn")->first()->id;
+        $horriblinGuts = Resource::where("name", "Horriblin Guts")->first()->id;
+        $stickyFrog = Resource::where("name", "Sticky Frog")->first()->id;
 
         $armorResources = new Collection();
 
@@ -780,6 +784,11 @@ class ArmorResourceSeeder extends Seeder
             [1, $stickyLizard, 3],
             [2, $stickyLizard, 5],
             [2, $horriblinHorn, 5],
+            [3, $blueHorriblinHorn, 5],
+            [3, $stickyFrog, 5],
+            [4, $blackHorriblinHorn, 5],
+            [4, $horriblinGuts, 10],
+            [4, $opal, 10],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($froggyHood, $froggyData),
