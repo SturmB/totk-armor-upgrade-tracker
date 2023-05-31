@@ -406,6 +406,38 @@ class ResourceSeeder extends Seeder
                 "name" => "Large Zonaite",
                 "image" => "$prefix/TotK_Large_Zonaite_Icon.png",
             ],
+            [
+                "name" => "Fire Fruit",
+                "image" => "$prefix/TotK_Fire_Fruit_Icon.png",
+            ],
+            [
+                "name" => "Fire-Breath Lizalfos Horn",
+                "image" => "$prefix/TotK_Fire-Breath_Lizalfos_Horn_Icon.png",
+            ],
+            [
+                "name" => "Summerwing Butterfly",
+                "image" => "$prefix/TotK_Summerwing_Butterfly_Icon.png",
+            ],
+            [
+                "name" => "Fire Like Stone",
+                "image" => "$prefix/TotK_Fire_Like_Stone_Icon.png",
+            ],
+            [
+                "name" => "Warm Darner",
+                "image" => "$prefix/TotK_Warm_Darner_Icon.png",
+            ],
+            [
+                "name" => "Large Zonai Charge",
+                "image" => "$prefix/TotK_Large_Zonai_Charge_Icon.png",
+            ],
+            [
+                "name" => "Gleeok Flame Horn",
+                "image" => "$prefix/TotK_Gleeok_Flame_Horn_Icon.png",
+            ],
+            [
+                "name" => "Sizzlefin Trout",
+                "image" => "$prefix/TotK_Sizzlefin_Trout_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

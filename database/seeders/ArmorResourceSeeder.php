@@ -99,6 +99,9 @@ class ArmorResourceSeeder extends Seeder
         $minersMask = Armor::where("name", "Miner's Mask")->first()->id;
         $minersTop = Armor::where("name", "Miner's Top")->first()->id;
         $minersTrousers = Armor::where("name", "Miner's Trousers")->first()->id;
+        $emberHeaddress = Armor::where("name", "Ember Headdress")->first()->id;
+        $emberShirt = Armor::where("name", "Ember Shirt")->first()->id;
+        $emberTrousers = Armor::where("name", "Ember Trousers")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -198,6 +201,14 @@ class ArmorResourceSeeder extends Seeder
         $deepFirefly = Resource::where("name", "Deep Firefly")->first()->id;
         $glowingCaveFish = Resource::where("name", "Glowing Cave Fish")->first()->id;
         $largeZonaite = Resource::where("name", "Large Zonaite")->first()->id;
+        $fireFruit = Resource::where("name", "Fire Fruit")->first()->id;
+        $fireBreathLizalfosHorn = Resource::where("name", "Fire-Breath Lizalfos Horn")->first()->id;
+        $summerwingButterfly = Resource::where("name", "Summerwing Butterfly")->first()->id;
+        $fireLikeStone = Resource::where("name", "Fire Like Stone")->first()->id;
+        $warmDarner = Resource::where("name", "Warm Darner")->first()->id;
+        $largeZonaiCharge = Resource::where("name", "Large Zonai Charge")->first()->id;
+        $gleeokFlameHorn = Resource::where("name", "Gleeok Flame Horn")->first()->id;
+        $sizzlefinTrout = Resource::where("name", "Sizzlefin Trout")->first()->id;
 
         $armorResources = new Collection();
 
@@ -829,6 +840,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($minersTrousers, $minersData),
+        );
+
+        // Ember Set
+        $emberData = collect([
+            [1, $fireFruit, 3],
+            [2, $fireBreathLizalfosHorn, 5],
+            [2, $summerwingButterfly, 5],
+            [3, $fireLikeStone, 5],
+            [3, $warmDarner, 5],
+            [3, $largeZonaiCharge, 5],
+            [4, $gleeokFlameHorn, 5],
+            [4, $sizzlefinTrout, 10],
+            [4, $largeZonaiCharge, 10],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($emberHeaddress, $emberData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($emberShirt, $emberData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($emberTrousers, $emberData),
         );
 
         // Populate the database.
