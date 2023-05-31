@@ -52,6 +52,7 @@ class ArmorSeeder extends Seeder
         $minersSet = ArmorSet::where("name", "Miner's Set")->first()->id;
         $emberSet = ArmorSet::where("name", "Ember Set")->first()->id;
         $chargedSet = ArmorSet::where("name", "Charged Set")->first()->id;
+        $frostbiteSet = ArmorSet::where("name", "Frostbite Set")->first()->id;
 
         $armors = [
             [
@@ -803,6 +804,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Charged_Trousers_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $chargedSet,
+            ],
+            [
+                "name" => "Frostbite Headdress",
+                "image" => "$prefix/TotK_Frostbite_Headdress_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
+            ],
+            [
+                "name" => "Frostbite Shirt",
+                "image" => "$prefix/TotK_Frostbite_Shirt_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
+            ],
+            [
+                "name" => "Frostbite Trousers",
+                "image" => "$prefix/TotK_Frostbite_Trousers_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
             ],
         ];
 

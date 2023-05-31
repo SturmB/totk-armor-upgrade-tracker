@@ -105,6 +105,9 @@ class ArmorResourceSeeder extends Seeder
         $chargedHeaddress = Armor::where("name", "Charged Headdress")->first()->id;
         $chargedShirt = Armor::where("name", "Charged Shirt")->first()->id;
         $chargedTrousers = Armor::where("name", "Charged Trousers")->first()->id;
+        $frostbiteHeaddress = Armor::where("name", "Frostbite Headdress")->first()->id;
+        $frostbiteShirt = Armor::where("name", "Frostbite Shirt")->first()->id;
+        $frostbiteTrousers = Armor::where("name", "Frostbite Trousers")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -219,6 +222,13 @@ class ArmorResourceSeeder extends Seeder
         $electricDarner = Resource::where("name", "Electric Darner")->first()->id;
         $gleeokThunderHorn = Resource::where("name", "Gleeok Thunder Horn")->first()->id;
         $voltfinTrout = Resource::where("name", "Voltfin Trout")->first()->id;
+        $iceFruit = Resource::where("name", "Ice Fruit")->first()->id;
+        $iceBreathLizalfosHorn = Resource::where("name", "Ice-Breath Lizalfos Horn")->first()->id;
+        $winterwingButterfly = Resource::where("name", "Winterwing Butterfly")->first()->id;
+        $iceLikeStone = Resource::where("name", "Ice Like Stone")->first()->id;
+        $coldDarner = Resource::where("name", "Cold Darner")->first()->id;
+        $gleeokFrostHorn = Resource::where("name", "Gleeok Frost Horn")->first()->id;
+        $chillfinTrout = Resource::where("name", "Chillfin Trout")->first()->id;
 
         $armorResources = new Collection();
 
@@ -894,6 +904,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($chargedTrousers, $chargedData),
+        );
+
+        // Frostbite Set
+        $frostbiteData = collect([
+            [1, $iceFruit, 3],
+            [2, $iceBreathLizalfosHorn, 5],
+            [2, $winterwingButterfly, 5],
+            [3, $iceLikeStone, 5],
+            [3, $coldDarner, 5],
+            [3, $largeZonaiCharge, 5],
+            [4, $gleeokFrostHorn, 5],
+            [4, $chillfinTrout, 10],
+            [4, $largeZonaiCharge, 10],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($frostbiteHeaddress, $frostbiteData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($frostbiteShirt, $frostbiteData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($frostbiteTrousers, $frostbiteData),
         );
 
         // Populate the database.
