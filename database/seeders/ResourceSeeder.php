@@ -382,6 +382,30 @@ class ResourceSeeder extends Seeder
                 "name" => "Sticky Frog",
                 "image" => "$prefix/TotK_Sticky_Frog_Icon.png",
             ],
+            [
+                "name" => "Brightbloom Seed",
+                "image" => "$prefix/TotK_Brightbloom_Seed_Icon.png",
+            ],
+            [
+                "name" => "Giant Brightbloom Seed",
+                "image" => "$prefix/TotK_Giant_Brightbloom_Seed_Icon.png",
+            ],
+            [
+                "name" => "Brightcap",
+                "image" => "$prefix/TotK_Brightcap_Icon.png",
+            ],
+            [
+                "name" => "Deep Firefly",
+                "image" => "$prefix/TotK_Deep_Firefly_Icon.png",
+            ],
+            [
+                "name" => "Glowing Cave Fish",
+                "image" => "$prefix/TotK_Glowing_Cave_Fish_Icon.png",
+            ],
+            [
+                "name" => "Large Zonaite",
+                "image" => "$prefix/TotK_Large_Zonaite_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

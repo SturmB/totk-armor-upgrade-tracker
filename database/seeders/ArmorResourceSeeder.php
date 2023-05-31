@@ -96,6 +96,9 @@ class ArmorResourceSeeder extends Seeder
         $froggyHood = Armor::where("name", "Froggy Hood")->first()->id;
         $froggySleeve = Armor::where("name", "Froggy Sleeve")->first()->id;
         $froggyLeggings = Armor::where("name", "Froggy Leggings")->first()->id;
+        $minersMask = Armor::where("name", "Miner's Mask")->first()->id;
+        $minersTop = Armor::where("name", "Miner's Top")->first()->id;
+        $minersTrousers = Armor::where("name", "Miner's Trousers")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -189,6 +192,12 @@ class ArmorResourceSeeder extends Seeder
         $blackHorriblinHorn = Resource::where("name", "Black Horriblin Horn")->first()->id;
         $horriblinGuts = Resource::where("name", "Horriblin Guts")->first()->id;
         $stickyFrog = Resource::where("name", "Sticky Frog")->first()->id;
+        $brightbloomSeed = Resource::where("name", "Brightbloom Seed")->first()->id;
+        $giantBrightbloomSeed = Resource::where("name", "Giant Brightbloom Seed")->first()->id;
+        $brightcap = Resource::where("name", "Brightcap")->first()->id;
+        $deepFirefly = Resource::where("name", "Deep Firefly")->first()->id;
+        $glowingCaveFish = Resource::where("name", "Glowing Cave Fish")->first()->id;
+        $largeZonaite = Resource::where("name", "Large Zonaite")->first()->id;
 
         $armorResources = new Collection();
 
@@ -798,6 +807,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($froggyLeggings, $froggyData),
+        );
+
+        // Miner's Set
+        $minersData = collect([
+            [1, $brightbloomSeed, 10],
+            [2, $brightbloomSeed, 20],
+            [2, $brightcap, 5],
+            [3, $giantBrightbloomSeed, 15],
+            [3, $deepFirefly, 10],
+            [3, $glowingCaveFish, 5],
+            [4, $giantBrightbloomSeed, 20],
+            [4, $largeZonaite, 10],
+            [4, $diamond, 3],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($minersMask, $minersData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($minersTop, $minersData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($minersTrousers, $minersData),
         );
 
         // Populate the database.
