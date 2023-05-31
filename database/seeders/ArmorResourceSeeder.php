@@ -111,6 +111,9 @@ class ArmorResourceSeeder extends Seeder
         $zonaiteHelm = Armor::where("name", "Zonaite Helm")->first()->id;
         $zonaiteWaistguard = Armor::where("name", "Zonaite Waistguard")->first()->id;
         $zonaiteShinGuards = Armor::where("name", "Zonaite Shin Guards")->first()->id;
+        $maskOfAwakening = Armor::where("name", "Mask of Awakening")->first()->id;
+        $tunicOfAwakening = Armor::where("name", "Tunic of Awakening")->first()->id;
+        $trousersOfAwakening = Armor::where("name", "Trousers of Awakening")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -960,6 +963,27 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($zonaiteShinGuards, $zonaiteData),
+        );
+
+        // Awakening Set
+        $awakeningData = collect([
+            [1, $luminousStone, 10],
+            [1, $starFragment, 1],
+            [2, $luminousStone, 15],
+            [2, $starFragment, 1],
+            [3, $luminousStone, 20],
+            [3, $starFragment, 1],
+            [4, $luminousStone, 30],
+            [5, $starFragment, 1],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($maskOfAwakening, $awakeningData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($tunicOfAwakening, $awakeningData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($trousersOfAwakening, $awakeningData),
         );
 
         // Populate the database.

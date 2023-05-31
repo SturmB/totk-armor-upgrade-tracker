@@ -55,6 +55,7 @@ class ArmorSeeder extends Seeder
         $frostbiteSet = ArmorSet::where("name", "Frostbite Set")->first()->id;
         $mysticSet = ArmorSet::where("name", "Mystic Set")->first()->id;
         $zonaiteSet = ArmorSet::where("name", "Zonaite Set")->first()->id;
+        $awakeningSet = ArmorSet::where("name", "Awakening Set")->first()->id;
 
         $armors = [
             [
@@ -866,6 +867,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Zonaite_Shin_Guards_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Mask of Awakening",
+                "image" => "$prefix/TotK_Mask_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
+            ],
+            [
+                "name" => "Tunic of Awakening",
+                "image" => "$prefix/TotK_Tunic_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
+            ],
+            [
+                "name" => "Trousers of Awakening",
+                "image" => "$prefix/TotK_Trousers_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
             ],
         ];
 
