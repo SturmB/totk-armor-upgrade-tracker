@@ -54,6 +54,7 @@ class ArmorSeeder extends Seeder
         $chargedSet = ArmorSet::where("name", "Charged Set")->first()->id;
         $frostbiteSet = ArmorSet::where("name", "Frostbite Set")->first()->id;
         $mysticSet = ArmorSet::where("name", "Mystic Set")->first()->id;
+        $zonaiteSet = ArmorSet::where("name", "Zonaite Set")->first()->id;
 
         $armors = [
             [
@@ -847,6 +848,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Mystic_Trousers_Icon.png",
                 "upgradable" => 0,
                 "armor_set_id" => $mysticSet,
+            ],
+            [
+                "name" => "Zonaite Helm",
+                "image" => "$prefix/TotK_Zonaite_Helm_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Zonaite Waistguard",
+                "image" => "$prefix/TotK_Zonaite_Waistguard_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Zonaite Shin Guards",
+                "image" => "$prefix/TotK_Zonaite_Shin_Guards_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
             ],
         ];
 

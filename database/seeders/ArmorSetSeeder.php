@@ -158,6 +158,10 @@ class ArmorSetSeeder extends Seeder
                 "name" => "Mystic Set",
                 "image" => null,
             ],
+            [
+                "name" => "Zonaite Set",
+                "image" => null,
+            ],
         ];
 
         ArmorSet::upsert($armorSets, ['name'], ['image']);

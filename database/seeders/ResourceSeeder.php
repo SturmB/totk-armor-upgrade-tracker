@@ -494,6 +494,38 @@ class ResourceSeeder extends Seeder
                 "name" => "Chillfin Trout",
                 "image" => "$prefix/TotK_Chillfin_Trout_Icon.png",
             ],
+            [
+                "name" => "Soldier Construct Horn",
+                "image" => "$prefix/TotK_Soldier_Construct_Horn_Icon.png",
+            ],
+            [
+                "name" => "Soldier Construct II Horn",
+                "image" => "$prefix/TotK_Soldier_Construct_II_Horn_Icon.png",
+            ],
+            [
+                "name" => "Soldier Construct III Horn",
+                "image" => "$prefix/TotK_Soldier_Construct_III_Horn_Icon.png",
+            ],
+            [
+                "name" => "Soldier Construct IV Horn",
+                "image" => "$prefix/TotK_Soldier_Construct_IV_Horn_Icon.png",
+            ],
+            [
+                "name" => "Zonaite",
+                "image" => "$prefix/TotK_Zonaite_Icon.png",
+            ],
+            [
+                "name" => "Captain Construct I Horn",
+                "image" => "$prefix/TotK_Captain_Construct_I_Horn_Icon.png",
+            ],
+            [
+                "name" => "Captain Construct II Horn",
+                "image" => "$prefix/TotK_Captain_Construct_II_Horn_Icon.png",
+            ],
+            [
+                "name" => "Captain Construct III Horn",
+                "image" => "$prefix/TotK_Captain_Construct_III_Horn_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

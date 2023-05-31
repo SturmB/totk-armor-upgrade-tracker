@@ -108,6 +108,9 @@ class ArmorResourceSeeder extends Seeder
         $frostbiteHeaddress = Armor::where("name", "Frostbite Headdress")->first()->id;
         $frostbiteShirt = Armor::where("name", "Frostbite Shirt")->first()->id;
         $frostbiteTrousers = Armor::where("name", "Frostbite Trousers")->first()->id;
+        $zonaiteHelm = Armor::where("name", "Zonaite Helm")->first()->id;
+        $zonaiteWaistguard = Armor::where("name", "Zonaite Waistguard")->first()->id;
+        $zonaiteShinGuards = Armor::where("name", "Zonaite Shin Guards")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -229,6 +232,14 @@ class ArmorResourceSeeder extends Seeder
         $coldDarner = Resource::where("name", "Cold Darner")->first()->id;
         $gleeokFrostHorn = Resource::where("name", "Gleeok Frost Horn")->first()->id;
         $chillfinTrout = Resource::where("name", "Chillfin Trout")->first()->id;
+        $soldierConstructHorn = Resource::where("name", "Soldier Construct Horn")->first()->id;
+        $soldierConstruct2Horn = Resource::where("name", "Soldier Construct II Horn")->first()->id;
+        $soldierConstruct3Horn = Resource::where("name", "Soldier Construct III Horn")->first()->id;
+        $soldierConstruct4Horn = Resource::where("name", "Soldier Construct IV Horn")->first()->id;
+        $zonaite = Resource::where("name", "Zonaite")->first()->id;
+        $captainConstruct1Horn = Resource::where("name", "Captain Construct I Horn")->first()->id;
+        $captainConstruct2Horn = Resource::where("name", "Captain Construct II Horn")->first()->id;
+        $captainConstruct3Horn = Resource::where("name", "Captain Construct III Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -743,14 +754,14 @@ class ArmorResourceSeeder extends Seeder
         );
 
         // Hero of the Wild Set
-        $heroofTheWildData = collect([
+        $heroOfTheWildData = collect([
             [1, $acorn, 10],
             [2, $courserBeeHoney, 5],
             [3, $energeticRhinoBeetle, 5],
             [4, $starFragment, 1],
         ]);
         $armorResources->push(
-            $this->buildArmorRequirements($capOfTheWild, $heroofTheWildData->concat([
+            $this->buildArmorRequirements($capOfTheWild, $heroOfTheWildData->concat([
                 [1, $faroshsScale, 2],
                 [2, $faroshsClaw, 2],
                 [3, $shardOfFaroshsFang, 2],
@@ -758,7 +769,7 @@ class ArmorResourceSeeder extends Seeder
             ])),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($tunicOfTheWild, $heroofTheWildData->concat([
+            $this->buildArmorRequirements($tunicOfTheWild, $heroOfTheWildData->concat([
                 [1, $naydrasScale, 2],
                 [2, $naydrasClaw, 2],
                 [3, $shardOfNaydrasFang, 2],
@@ -766,7 +777,7 @@ class ArmorResourceSeeder extends Seeder
             ])),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($trousersOfTheWild, $heroofTheWildData->concat([
+            $this->buildArmorRequirements($trousersOfTheWild, $heroOfTheWildData->concat([
                 [1, $dinraalsScale, 2],
                 [2, $dinraalsClaw, 2],
                 [3, $shardOfDinraalsFang, 2],
@@ -926,6 +937,29 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($frostbiteTrousers, $frostbiteData),
+        );
+
+        // Zonaite Set
+        $zonaiteData = collect([
+            [1, $soldierConstructHorn, 5],
+            [2, $soldierConstruct2Horn, 5],
+            [2, $zonaite, 5],
+            [2, $captainConstruct1Horn, 5],
+            [3, $largeZonaite, 5],
+            [3, $captainConstruct2Horn, 5],
+            [3, $soldierConstruct3Horn, 5],
+            [4, $largeZonaite, 10],
+            [4, $captainConstruct3Horn, 5],
+            [4, $soldierConstruct4Horn, 5],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($zonaiteHelm, $zonaiteData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($zonaiteWaistguard, $zonaiteData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($zonaiteShinGuards, $zonaiteData),
         );
 
         // Populate the database.
