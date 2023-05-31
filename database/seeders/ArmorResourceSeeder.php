@@ -102,6 +102,9 @@ class ArmorResourceSeeder extends Seeder
         $emberHeaddress = Armor::where("name", "Ember Headdress")->first()->id;
         $emberShirt = Armor::where("name", "Ember Shirt")->first()->id;
         $emberTrousers = Armor::where("name", "Ember Trousers")->first()->id;
+        $chargedHeaddress = Armor::where("name", "Charged Headdress")->first()->id;
+        $chargedShirt = Armor::where("name", "Charged Shirt")->first()->id;
+        $chargedTrousers = Armor::where("name", "Charged Trousers")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -209,6 +212,13 @@ class ArmorResourceSeeder extends Seeder
         $largeZonaiCharge = Resource::where("name", "Large Zonai Charge")->first()->id;
         $gleeokFlameHorn = Resource::where("name", "Gleeok Flame Horn")->first()->id;
         $sizzlefinTrout = Resource::where("name", "Sizzlefin Trout")->first()->id;
+        $shockFruit = Resource::where("name", "Shock Fruit")->first()->id;
+        $thunderwingButterfly = Resource::where("name", "Thunderwing Butterfly")->first()->id;
+        $electricLizalfosHorn = Resource::where("name", "Electric Lizalfos Horn")->first()->id;
+        $shockLikeStone = Resource::where("name", "Shock Like Stone")->first()->id;
+        $electricDarner = Resource::where("name", "Electric Darner")->first()->id;
+        $gleeokThunderHorn = Resource::where("name", "Gleeok Thunder Horn")->first()->id;
+        $voltfinTrout = Resource::where("name", "Voltfin Trout")->first()->id;
 
         $armorResources = new Collection();
 
@@ -862,6 +872,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($emberTrousers, $emberData),
+        );
+
+        // Charged Set
+        $chargedData = collect([
+            [1, $shockFruit, 3],
+            [2, $thunderwingButterfly, 3],
+            [2, $electricLizalfosHorn, 5],
+            [3, $shockLikeStone, 5],
+            [3, $electricDarner, 5],
+            [3, $largeZonaiCharge, 5],
+            [4, $gleeokThunderHorn, 5],
+            [4, $voltfinTrout, 10],
+            [4, $largeZonaiCharge, 5],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($chargedHeaddress, $chargedData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($chargedShirt, $chargedData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($chargedTrousers, $chargedData),
         );
 
         // Populate the database.

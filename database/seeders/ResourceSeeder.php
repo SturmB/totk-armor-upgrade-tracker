@@ -438,6 +438,34 @@ class ResourceSeeder extends Seeder
                 "name" => "Sizzlefin Trout",
                 "image" => "$prefix/TotK_Sizzlefin_Trout_Icon.png",
             ],
+            [
+                "name" => "Shock Fruit",
+                "image" => "$prefix/TotK_Shock_Fruit_Icon.png",
+            ],
+            [
+                "name" => "Thunderwing Butterfly",
+                "image" => "$prefix/TotK_Thunderwing_Butterfly_Icon.png",
+            ],
+            [
+                "name" => "Electric Lizalfos Horn",
+                "image" => "$prefix/TotK_Electric_Lizalfos_Horn_Icon.png",
+            ],
+            [
+                "name" => "Shock Like Stone",
+                "image" => "$prefix/TotK_Shock_Like_Stone_Icon.png",
+            ],
+            [
+                "name" => "Electric Darner",
+                "image" => "$prefix/TotK_Electric_Darner_Icon.png",
+            ],
+            [
+                "name" => "Gleeok Thunder Horn",
+                "image" => "$prefix/TotK_Gleeok_Thunder_Horn_Icon.png",
+            ],
+            [
+                "name" => "Voltfin Trout",
+                "image" => "$prefix/TotK_Voltfin_Trout_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);
