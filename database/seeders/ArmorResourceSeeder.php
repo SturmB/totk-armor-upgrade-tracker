@@ -160,6 +160,9 @@ class ArmorResourceSeeder extends Seeder
         $sapphire = Resource::where("name", "Sapphire")->first()->id;
         $diamond = Resource::where("name", "Diamond")->first()->id;
         $bokoblinHorn = Resource::where("name", "Bokoblin Horn")->first()->id;
+        $blueBokoblinHorn = Resource::where("name", "Blue Bokoblin Horn")->first()->id;
+        $blackBokoblinHorn = Resource::where("name", "Black Bokoblin Horn")->first()->id;
+        $silverBokoblinHorn = Resource::where("name", "Silver Bokoblin Horn")->first()->id;
         $bokoblinFang = Resource::where("name", "Bokoblin Fang")->first()->id;
         $bokoblinGuts = Resource::where("name", "Bokoblin Guts")->first()->id;
         $moblinHorn = Resource::where("name", "Moblin Horn")->first()->id;
@@ -243,6 +246,8 @@ class ArmorResourceSeeder extends Seeder
         $captainConstruct1Horn = Resource::where("name", "Captain Construct I Horn")->first()->id;
         $captainConstruct2Horn = Resource::where("name", "Captain Construct II Horn")->first()->id;
         $captainConstruct3Horn = Resource::where("name", "Captain Construct III Horn")->first()->id;
+        $shardOfFaroshsSpike = Resource::where("name", "Shard of Farosh's Spike")->first()->id;
+        $faroshsHorn = Resource::where("name", "Farosh's Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -261,12 +266,14 @@ class ArmorResourceSeeder extends Seeder
         // Hylian Set
         $hylianData = collect([
             [1, $bokoblinHorn, 5],
-            [2, $bokoblinHorn, 8],
-            [2, $bokoblinFang, 5],
-            [3, $bokoblinFang, 10],
-            [3, $bokoblinGuts, 5],
-            [4, $bokoblinGuts, 15],
+            [2, $blueBokoblinHorn, 5],
+            [2, $bokoblinFang, 3],
+            [3, $amber, 20],
+            [3, $bokoblinGuts, 3],
+            [3, $blackBokoblinHorn, 5],
             [4, $amber, 30],
+            [4, $bokoblinGuts, 5],
+            [4, $silverBokoblinHorn, 5],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($hylianHood, $hylianData),
@@ -759,33 +766,24 @@ class ArmorResourceSeeder extends Seeder
         // Hero of the Wild Set
         $heroOfTheWildData = collect([
             [1, $acorn, 10],
+            [1, $faroshsScale, 2],
             [2, $courserBeeHoney, 5],
-            [3, $energeticRhinoBeetle, 5],
-            [4, $starFragment, 1],
+            [2, $faroshsClaw, 2],
+            [3, $energeticRhinoBeetle, 3],
+            [3, $shardOfFaroshsFang, 2],
+            [3, $shardOfFaroshsSpike, 5],
+            [4, $starFragment, 3],
+            [4, $faroshsHorn, 2],
+            [4, $shardOfFaroshsSpike, 10],
         ]);
         $armorResources->push(
-            $this->buildArmorRequirements($capOfTheWild, $heroOfTheWildData->concat([
-                [1, $faroshsScale, 2],
-                [2, $faroshsClaw, 2],
-                [3, $shardOfFaroshsFang, 2],
-                [4, $shardOfFaroshsHorn, 2],
-            ])),
+            $this->buildArmorRequirements($capOfTheWild, $heroOfTheWildData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($tunicOfTheWild, $heroOfTheWildData->concat([
-                [1, $naydrasScale, 2],
-                [2, $naydrasClaw, 2],
-                [3, $shardOfNaydrasFang, 2],
-                [4, $shardOfNaydrasHorn, 2],
-            ])),
+            $this->buildArmorRequirements($tunicOfTheWild, $heroOfTheWildData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($trousersOfTheWild, $heroOfTheWildData->concat([
-                [1, $dinraalsScale, 2],
-                [2, $dinraalsClaw, 2],
-                [3, $shardOfDinraalsFang, 2],
-                [4, $shardOfDinraalsHorn, 2],
-            ])),
+            $this->buildArmorRequirements($trousersOfTheWild, $heroOfTheWildData),
         );
 
         // Divine Helms

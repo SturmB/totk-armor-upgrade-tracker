@@ -192,11 +192,23 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Bokoblin Horn",
-                "image" => "$prefix/BotW_Bokoblin_Horn_Icon.png",
+                "image" => "$prefix/TotK_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Blue Bokoblin Horn",
+                "image" => "$prefix/TotK_Blue_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Black Bokoblin Horn",
+                "image" => "$prefix/TotK_Black_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Silver Bokoblin Horn",
+                "image" => "$prefix/TotK_Silver_Bokoblin_Horn_Icon.png",
             ],
             [
                 "name" => "Bokoblin Fang",
-                "image" => "$prefix/BotW_Bokoblin_Fang_Icon.png",
+                "image" => "$prefix/TotK_Bokoblin_Fang_Icon.png",
             ],
             [
                 "name" => "Bokoblin Guts",
@@ -525,6 +537,14 @@ class ResourceSeeder extends Seeder
             [
                 "name" => "Captain Construct III Horn",
                 "image" => "$prefix/TotK_Captain_Construct_III_Horn_Icon.png",
+            ],
+            [
+                "name" => "Shard of Farosh's Spike",
+                "image" => "$prefix/TotK_Shard_of_Farosh's_Spike_Icon.png",
+            ],
+            [
+                "name" => "Farosh's Horn",
+                "image" => "$prefix/TotK_Farosh's_Horn_Icon.png",
             ],
         ];
 
