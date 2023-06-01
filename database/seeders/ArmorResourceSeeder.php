@@ -169,8 +169,11 @@ class ArmorResourceSeeder extends Seeder
         $moblinFang = Resource::where("name", "Moblin Fang")->first()->id;
         $moblinGuts = Resource::where("name", "Moblin Guts")->first()->id;
         $lizalfosHorn = Resource::where("name", "Lizalfos Horn")->first()->id;
+        $blueLizalfosHorn = Resource::where("name", "Blue Lizalfos Horn")->first()->id;
+        $blackLizalfosHorn = Resource::where("name", "Black Lizalfos Horn")->first()->id;
         $lizalfosTalon = Resource::where("name", "Lizalfos Talon")->first()->id;
         $lizalfosTail = Resource::where("name", "Lizalfos Tail")->first()->id;
+        $blueLizalfosTail = Resource::where("name", "Blue Lizalfos Tail")->first()->id;
         $icyLizalfosTail = Resource::where("name", "Icy Lizalfos Tail")->first()->id;
         $redLizalfosTail = Resource::where("name", "Red Lizalfos Tail")->first()->id;
         $yellowLizalfosTail = Resource::where("name", "Yellow Lizalfos Tail")->first()->id;
@@ -455,12 +458,14 @@ class ArmorResourceSeeder extends Seeder
         // Zora Set
         $zoraData = collect([
             [1, $lizalfosHorn, 3],
-            [2, $lizalfosTalon, 5],
             [2, $hyruleBass, 5],
-            [3, $lizalfosTail, 5],
-            [3, $heartyBass, 5],
-            [4, $lizalfosTail, 10],
-            [4, $opal, 15],
+            [2, $lizalfosTalon, 5],
+            [3, $heartyBass, 3],
+            [3, $lizalfosTail, 3],
+            [3, $blueLizalfosHorn, 5],
+            [4, $blackLizalfosHorn, 5],
+            [4, $blueLizalfosTail, 5],
+            [4, $opal, 20],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($zoraHelm, $zoraData),

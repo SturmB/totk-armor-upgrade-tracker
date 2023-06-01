@@ -228,7 +228,15 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Lizalfos Horn",
-                "image" => "$prefix/BotW_Lizalfos_Horn_Icon.png",
+                "image" => "$prefix/TotK_Lizalfos_Horn_Icon.png",
+            ],
+            [
+                "name" => "Blue Lizalfos Horn",
+                "image" => "$prefix/TotK_Blue_Lizalfos_Horn_Icon.png",
+            ],
+            [
+                "name" => "Black Lizalfos Horn",
+                "image" => "$prefix/TotK_Black_Lizalfos_Horn_Icon.png",
             ],
             [
                 "name" => "Lizalfos Talon",
@@ -237,6 +245,10 @@ class ResourceSeeder extends Seeder
             [
                 "name" => "Lizalfos Tail",
                 "image" => "$prefix/BotW_Lizalfos_Tail_Icon.png",
+            ],
+            [
+                "name" => "Blue Lizalfos Tail",
+                "image" => "$prefix/TotK_Blue_Lizalfos_Tail_Icon.png",
             ],
             [
                 "name" => "Icy Lizalfos Tail",
