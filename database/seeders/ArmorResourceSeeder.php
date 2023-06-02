@@ -321,14 +321,14 @@ class ArmorResourceSeeder extends Seeder
 
         $armorResources->push(
             $this->buildArmorRequirements($amberEarrings, collect([
-                [1, $amber, 3],
-                [1, $flint, 3],
-                [2, $amber, 10],
-                [2, $flint, 3],
-                [3, $amber, 20],
-                [3, $flint, 3],
-                [4, $amber, 30],
-                [4, $flint, 3],
+                [1, $amber, 10],
+                [1, $flint, 5],
+                [2, $amber, 20],
+                [2, $flint, 10],
+                [3, $amber, 35],
+                [3, $flint, 15],
+                [4, $amber, 60],
+                [4, $flint, 25],
             ])),
         );
 
@@ -337,11 +337,11 @@ class ArmorResourceSeeder extends Seeder
                 [1, $ruby, 2],
                 [1, $flint, 3],
                 [2, $ruby, 4],
-                [2, $flint, 3],
+                [2, $flint, 5],
                 [3, $ruby, 6],
                 [3, $starFragment, 1],
                 [4, $ruby, 10],
-                [4, $starFragment, 1],
+                [4, $starFragment, 2],
             ])),
         );
 
@@ -372,11 +372,11 @@ class ArmorResourceSeeder extends Seeder
                 [1, $sapphire, 2],
                 [1, $flint, 3],
                 [2, $sapphire, 4],
-                [2, $flint, 3],
+                [2, $flint, 5],
                 [3, $sapphire, 6],
                 [3, $starFragment, 1],
                 [4, $sapphire, 10],
-                [4, $starFragment, 1],
+                [4, $starFragment, 2],
             ])),
         );
 
@@ -407,11 +407,11 @@ class ArmorResourceSeeder extends Seeder
                 [1, $topaz, 2],
                 [1, $flint, 3],
                 [2, $topaz, 4],
-                [2, $flint, 3],
+                [2, $flint, 5],
                 [3, $topaz, 6],
                 [3, $starFragment, 1],
                 [4, $topaz, 10],
-                [4, $starFragment, 1],
+                [4, $starFragment, 2],
             ])),
         );
 
@@ -459,14 +459,14 @@ class ArmorResourceSeeder extends Seeder
 
         $armorResources->push(
             $this->buildArmorRequirements($opalEarrings, collect([
-                [1, $opal, 3],
-                [1, $flint, 3],
-                [2, $opal, 8],
-                [2, $flint, 3],
-                [3, $opal, 16],
-                [3, $flint, 3],
-                [4, $opal, 20],
-                [4, $flint, 3],
+                [1, $opal, 6],
+                [1, $flint, 5],
+                [2, $opal, 12],
+                [2, $flint, 10],
+                [3, $opal, 18],
+                [3, $flint, 15],
+                [4, $opal, 30],
+                [4, $flint, 25],
             ])),
         );
 
@@ -625,12 +625,12 @@ class ArmorResourceSeeder extends Seeder
             $this->buildArmorRequirements($diamondCirclet, collect([
                 [1, $diamond, 2],
                 [1, $flint, 3],
-                [2, $diamond, 4],
-                [2, $flint, 3],
-                [3, $diamond, 6],
+                [2, $diamond, 3],
+                [2, $flint, 5],
+                [3, $diamond, 5],
                 [3, $starFragment, 1],
-                [4, $diamond, 10],
-                [4, $starFragment, 1],
+                [4, $diamond, 8],
+                [4, $starFragment, 2],
             ])),
         );
 
