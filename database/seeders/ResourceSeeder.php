@@ -582,6 +582,14 @@ class ResourceSeeder extends Seeder
                 "name" => "Sundelion",
                 "image" => "$prefix/TotK_Sundelion_Icon.png",
             ],
+            [
+                "name" => "Gibdo Bone",
+                "image" => "$prefix/TotK_Gibdo_Bone_Icon.png",
+            ],
+            [
+                "name" => "Molduga Jaw",
+                "image" => "$prefix/TotK_Molduga_Jaw_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

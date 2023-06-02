@@ -257,6 +257,8 @@ class ArmorResourceSeeder extends Seeder
         $fireBreathLizalfosTail = Resource::where("name", "Fire-Breath Lizalfos Tail")->first()->id;
         $blueMoblinHorn = Resource::where("name", "Blue Moblin Horn")->first()->id;
         $sundelion = Resource::where("name", "Sundelion")->first()->id;
+        $gibdoBone = Resource::where("name", "Gibdo Bone")->first()->id;
+        $moldugaJaw = Resource::where("name", "Molduga Jaw")->first()->id;
 
         $armorResources = new Collection();
 
@@ -596,14 +598,16 @@ class ArmorResourceSeeder extends Seeder
 
         // Radiant Set
         $radiantData = collect([
-            [1, $luminousStone, 5],
-            [1, $bokoblinGuts, 3],
-            [2, $luminousStone, 8],
-            [2, $moblinGuts, 3],
-            [3, $luminousStone, 10],
-            [3, $moldugaGuts, 3],
-            [4, $luminousStone, 20],
-            [4, $lynelGuts, 1],
+            [1, $luminousStone, 10],
+            [1, $bokoblinGuts, 1],
+            [2, $luminousStone, 15],
+            [2, $moblinGuts, 2],
+            [3, $luminousStone, 20],
+            [3, $horriblinGuts, 3],
+            [3, $gibdoBone, 10],
+            [4, $luminousStone, 30],
+            [4, $lynelGuts, 3],
+            [4, $moldugaJaw, 3],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($radiantMask, $radiantData),
