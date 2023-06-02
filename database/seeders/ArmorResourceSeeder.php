@@ -256,6 +256,7 @@ class ArmorResourceSeeder extends Seeder
         $iceBreathLizalfosTail = Resource::where("name", "Ice-Breath Lizalfos Tail")->first()->id;
         $fireBreathLizalfosTail = Resource::where("name", "Fire-Breath Lizalfos Tail")->first()->id;
         $blueMoblinHorn = Resource::where("name", "Blue Moblin Horn")->first()->id;
+        $sundelion = Resource::where("name", "Sundelion")->first()->id;
 
         $armorResources = new Collection();
 
@@ -490,10 +491,11 @@ class ArmorResourceSeeder extends Seeder
         // Stealth Set
         $stealthData = collect([
             [1, $blueNightshade, 3],
-            [2, $blueNightshade, 5],
             [2, $sunsetFirefly, 5],
+            [2, $blueNightshade, 5],
             [3, $silentShroom, 8],
             [3, $sneakyRiverSnail, 5],
+            [4, $sundelion, 10],
             [4, $stealthfinTrout, 10],
             [4, $silentPrincess, 5],
         ]);
