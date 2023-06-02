@@ -254,6 +254,7 @@ class ArmorResourceSeeder extends Seeder
         $coolSafflina = Resource::where("name", "Cool Safflina")->first()->id;
         $chillshroom = Resource::where("name", "Chillshroom")->first()->id;
         $iceBreathLizalfosTail = Resource::where("name", "Ice-Breath Lizalfos Tail")->first()->id;
+        $fireBreathLizalfosTail = Resource::where("name", "Fire-Breath Lizalfos Tail")->first()->id;
 
         $armorResources = new Collection();
 
@@ -343,10 +344,12 @@ class ArmorResourceSeeder extends Seeder
             [1, $redChuchuJelly, 3],
             [2, $redChuchuJelly, 5],
             [2, $warmSafflina, 3],
-            [3, $fireKeeseWing, 8],
             [3, $sunshroom, 5],
-            [4, $redLizalfosTail, 10],
+            [3, $fireKeeseWing, 5],
+            [3, $fireBreathLizalfosTail, 3],
             [4, $ruby, 5],
+            [4, $fireBreathLizalfosHorn, 5],
+            [4, $fireBreathLizalfosTail, 10],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($snowquillHeaddress, $snowquillData),

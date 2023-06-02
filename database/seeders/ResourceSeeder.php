@@ -570,6 +570,10 @@ class ResourceSeeder extends Seeder
                 "name" => "Ice-Breath Lizalfos Tail",
                 "image" => "$prefix/TotK_Ice-Breath_Lizalfos_Tail_Icon.png",
             ],
+            [
+                "name" => "Fire-Breath Lizalfos Tail",
+                "image" => "$prefix/TotK_Fire-Breath_Lizalfos_Tail_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);
