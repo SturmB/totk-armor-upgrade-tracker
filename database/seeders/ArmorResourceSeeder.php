@@ -255,6 +255,7 @@ class ArmorResourceSeeder extends Seeder
         $chillshroom = Resource::where("name", "Chillshroom")->first()->id;
         $iceBreathLizalfosTail = Resource::where("name", "Ice-Breath Lizalfos Tail")->first()->id;
         $fireBreathLizalfosTail = Resource::where("name", "Fire-Breath Lizalfos Tail")->first()->id;
+        $blueMoblinHorn = Resource::where("name", "Blue Moblin Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -431,14 +432,15 @@ class ArmorResourceSeeder extends Seeder
 
         // Flamebreaker Set
         $flamebreakerData = collect([
-            [1, $fireproofLizard, 3],
             [1, $moblinHorn, 3],
-            [2, $fireproofLizard, 5],
             [2, $moblinFang, 5],
-            [3, $smotherwingButterfly, 5],
-            [3, $moblinGuts, 3],
-            [4, $smotherwingButterfly, 8],
-            [4, $hinoxGuts, 5],
+            [2, $fireproofLizard, 5],
+            [3, $blueMoblinHorn, 5],
+            [3, $flint, 15],
+            [3, $smotherwingButterfly, 3],
+            [4, $fireBreathLizalfosHorn, 5],
+            [4, $fireBreathLizalfosTail, 10],
+            [4, $ruby, 5],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($flamebreakerHelm, $flamebreakerData),

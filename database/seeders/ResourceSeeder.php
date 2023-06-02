@@ -216,7 +216,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Moblin Horn",
-                "image" => "$prefix/BotW_Moblin_Horn_Icon.png",
+                "image" => "$prefix/TotK_Moblin_Horn_Icon.png",
             ],
             [
                 "name" => "Moblin Fang",
@@ -573,6 +573,10 @@ class ResourceSeeder extends Seeder
             [
                 "name" => "Fire-Breath Lizalfos Tail",
                 "image" => "$prefix/TotK_Fire-Breath_Lizalfos_Tail_Icon.png",
+            ],
+            [
+                "name" => "Blue Moblin Horn",
+                "image" => "$prefix/TotK_Blue_Moblin_Horn_Icon.png",
             ],
         ];
 
