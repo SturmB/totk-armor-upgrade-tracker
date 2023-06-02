@@ -271,6 +271,8 @@ class ArmorResourceSeeder extends Seeder
         $blueManedLynelMaceHorn = Resource::where("name", "Blue-Maned Lynel Mace Horn")->first()->id;
         $whiteManedLynelSaberHorn = Resource::where("name", "White-Maned Lynel Saber Horn")->first()->id;
         $whiteManedLynelMaceHorn = Resource::where("name", "White-Maned Lynel Mace Horn")->first()->id;
+        $gibdoGuts = Resource::where("name", "Gibdo Guts")->first()->id;
+        $heartyLizard = Resource::where("name", "Hearty Lizard")->first()->id;
 
         $armorResources = new Collection();
 
@@ -676,14 +678,15 @@ class ArmorResourceSeeder extends Seeder
 
         $armorResources->push(
             $this->buildArmorRequirements($sandBoots, collect([
-                [1, $moldugaFin, 5],
-                [1, $hightailLizard, 10],
-                [2, $moldugaFin, 10],
-                [2, $swiftCarrot, 10],
-                [3, $moldugaGuts, 3],
-                [3, $rushroom, 15],
+                [1, $hightailLizard, 3],
+                [2, $gibdoBone, 20],
+                [2, $swiftCarrot, 5],
+                [3, $gibdoGuts, 5],
+                [3, $rushroom, 10],
+                [3, $moldugaFin, 5],
                 [4, $moldugaGuts, 5],
-                [4, $swiftViolet, 15],
+                [4, $swiftViolet, 10],
+                [4, $heartyLizard, 5],
             ])),
         );
 
