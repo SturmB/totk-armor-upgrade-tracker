@@ -300,12 +300,14 @@ class ArmorResourceSeeder extends Seeder
         $soldiersData = collect([
             [1, $chuchuJelly, 5],
             [1, $bokoblinGuts, 3],
-            [2, $keeseEyeball, 3],
+            [2, $keeseEyeball, 5],
             [2, $moblinGuts, 3],
-            [3, $lizalfosTail, 5],
-            [3, $hinoxGuts, 2],
-            [4, $lynelHoof, 4],
-            [4, $lynelGuts, 2],
+            [3, $flint, 30],
+            [3, $lizalfosTail, 3],
+            [3, $hinoxGuts, 3],
+            [4, $lynelHoof, 5],
+            [4, $lynelGuts, 5],
+            [4, $amber, 30],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($soldiersHelm, $soldiersData),
