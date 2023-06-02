@@ -598,6 +598,46 @@ class ResourceSeeder extends Seeder
                 "name" => "Electric Safflina",
                 "image" => "$prefix/TotK_Electric_Safflina_Icon.png",
             ],
+            [
+                "name" => "Mighty Thistle",
+                "image" => "$prefix/TotK_Mighty_Thistle_Icon.png",
+            ],
+            [
+                "name" => "Razorshroom",
+                "image" => "$prefix/TotK_Razorshroom_Icon.png",
+            ],
+            [
+                "name" => "Razorclaw Crab",
+                "image" => "$prefix/TotK_Razorclaw_Crab_Icon.png",
+            ],
+            [
+                "name" => "Bladed Rhino Beetle",
+                "image" => "$prefix/TotK_Bladed_Rhino_Beetle_Icon.png",
+            ],
+            [
+                "name" => "Lynel Saber Horn",
+                "image" => "$prefix/TotK_Lynel_Saber_Horn_Icon.png",
+            ],
+            [
+                "name" => "Lynel Mace Horn",
+                "image" => "$prefix/TotK_Lynel_Mace_Horn_Icon.png",
+            ],
+            [
+                "name" => "Blue-Maned Lynel Saber Horn",
+                "image" => "$prefix/TotK_Blue-Maned_Lynel_Saber_Horn_Icon.png",
+            ],
+            [
+                "name" => "Blue-Maned Lynel Mace Horn",
+                "image" => "$prefix/TotK_Blue-Maned_Lynel_Mace_Horn_Icon.png",
+            ],
+            [
+                "name" => "White-Maned Lynel Saber Horn",
+                "image" => "$prefix/TotK_White-Maned_Lynel_Saber_Horn_Icon.png",
+            ],
+            [
+                "name" => "White-Maned Lynel Mace Horn",
+                "image" => "$prefix/TotK_White-Maned_Lynel_Mace_Horn_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

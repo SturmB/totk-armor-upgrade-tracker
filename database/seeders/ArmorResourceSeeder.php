@@ -261,6 +261,16 @@ class ArmorResourceSeeder extends Seeder
         $moldugaJaw = Resource::where("name", "Molduga Jaw")->first()->id;
         $electricLizalfosTail = Resource::where("name", "Electric Lizalfos Tail")->first()->id;
         $electricSafflina = Resource::where("name", "Electric Safflina")->first()->id;
+        $mightyThistle = Resource::where("name", "Mighty Thistle")->first()->id;
+        $razorshroom = Resource::where("name", "Razorshroom")->first()->id;
+        $razorclawCrab = Resource::where("name", "Razorclaw Crab")->first()->id;
+        $bladedRhinoBeetle = Resource::where("name", "Bladed Rhino Beetle")->first()->id;
+        $lynelSaberHorn = Resource::where("name", "Lynel Saber Horn")->first()->id;
+        $lynelMaceHorn = Resource::where("name", "Lynel Mace Horn")->first()->id;
+        $blueManedLynelSaberHorn = Resource::where("name", "Blue-Maned Lynel Saber Horn")->first()->id;
+        $blueManedLynelMaceHorn = Resource::where("name", "Blue-Maned Lynel Mace Horn")->first()->id;
+        $whiteManedLynelSaberHorn = Resource::where("name", "White-Maned Lynel Saber Horn")->first()->id;
+        $whiteManedLynelMaceHorn = Resource::where("name", "White-Maned Lynel Mace Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -554,21 +564,25 @@ class ArmorResourceSeeder extends Seeder
 
         // Barbarian Set
         $barbarianData = collect([
-            [1, $lynelHorn, 3],
-            [2, $lynelHorn, 5],
-            [2, $lynelHoof, 3],
-            [3, $lynelHoof, 8],
-            [3, $lynelGuts, 1],
-            [4, $lynelGuts, 2],
+            [1, $mightyThistle, 3],
+            [2, $razorshroom, 5],
+            [2, $lynelSaberHorn, 2],
+            [2, $lynelMaceHorn, 2],
+            [3, $blueManedLynelSaberHorn, 3],
+            [3, $blueManedLynelMaceHorn, 3],
+            [3, $razorclawCrab, 3],
+            [4, $whiteManedLynelSaberHorn, 3],
+            [4, $whiteManedLynelMaceHorn, 3],
+            [4, $bladedRhinoBeetle, 3],
         ]);
         $armorResources->push(
-            $this->buildArmorRequirements($barbarianHelm, $barbarianData->concat([[4, $shardOfDinraalsHorn, 1]])),
+            $this->buildArmorRequirements($barbarianHelm, $barbarianData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($barbarianArmor, $barbarianData->concat([[4, $shardOfFaroshsHorn, 1]])),
+            $this->buildArmorRequirements($barbarianArmor, $barbarianData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($barbarianLegWraps, $barbarianData->concat([[4, $shardOfNaydrasHorn, 1]])),
+            $this->buildArmorRequirements($barbarianLegWraps, $barbarianData),
         );
 
         // Fierce Deity Set
