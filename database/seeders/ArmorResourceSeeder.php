@@ -259,6 +259,8 @@ class ArmorResourceSeeder extends Seeder
         $sundelion = Resource::where("name", "Sundelion")->first()->id;
         $gibdoBone = Resource::where("name", "Gibdo Bone")->first()->id;
         $moldugaJaw = Resource::where("name", "Molduga Jaw")->first()->id;
+        $electricLizalfosTail = Resource::where("name", "Electric Lizalfos Tail")->first()->id;
+        $electricSafflina = Resource::where("name", "Electric Safflina")->first()->id;
 
         $armorResources = new Collection();
 
@@ -418,12 +420,15 @@ class ArmorResourceSeeder extends Seeder
         // Rubber Set
         $rubberData = collect([
             [1, $yellowChuchuJelly, 3],
-            [2, $yellowChuchuJelly, 5],
+            [1, $electricLizalfosHorn, 1],
+            [2, $yellowChuchuJelly, 8],
             [2, $voltfruit, 5],
             [3, $zapshroom, 5],
-            [3, $yellowLizalfosTail, 5],
-            [4, $yellowLizalfosTail, 10],
-            [4, $topaz, 10],
+            [3, $electricLizalfosTail, 5],
+            [3, $electricSafflina, 8],
+            [4, $topaz, 5],
+            [4, $electricLizalfosHorn, 5],
+            [4, $electricLizalfosTail, 8],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($rubberHelm, $rubberData),
