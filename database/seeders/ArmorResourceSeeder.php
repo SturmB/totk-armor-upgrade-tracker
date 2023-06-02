@@ -528,10 +528,10 @@ class ArmorResourceSeeder extends Seeder
             [1, $rushroom, 3],
             [2, $electricKeeseWing, 5],
             [2, $hightailLizard, 5],
-            [3, $iceKeeseWing, 5],
             [3, $hotFootedFrog, 10],
-            [4, $fireKeeseWing, 5],
+            [3, $iceKeeseWing, 8],
             [4, $swiftViolet, 20],
+            [4, $fireKeeseWing, 10],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($climbersBandanna, $climbingData),
