@@ -251,6 +251,9 @@ class ArmorResourceSeeder extends Seeder
         $captainConstruct3Horn = Resource::where("name", "Captain Construct III Horn")->first()->id;
         $shardOfFaroshsSpike = Resource::where("name", "Shard of Farosh's Spike")->first()->id;
         $faroshsHorn = Resource::where("name", "Farosh's Horn")->first()->id;
+        $coolSafflina = Resource::where("name", "Cool Safflina")->first()->id;
+        $chillshroom = Resource::where("name", "Chillshroom")->first()->id;
+        $iceBreathLizalfosTail = Resource::where("name", "Ice-Breath Lizalfos Tail")->first()->id;
 
         $armorResources = new Collection();
 
@@ -372,10 +375,12 @@ class ArmorResourceSeeder extends Seeder
         $desertVoeData = collect([
             [1, $whiteChuchuJelly, 3],
             [2, $whiteChuchuJelly, 5],
-            [2, $iceKeeseWing, 3],
-            [3, $iceKeeseWing, 8],
-            [3, $icyLizalfosTail, 3],
-            [4, $icyLizalfosTail, 10],
+            [2, $coolSafflina, 3],
+            [3, $chillshroom, 5],
+            [3, $iceKeeseWing, 5],
+            [3, $iceBreathLizalfosTail, 3],
+            [4, $iceBreathLizalfosHorn, 5],
+            [4, $iceBreathLizalfosTail, 10],
             [4, $sapphire, 5],
         ]);
         $armorResources->push(
