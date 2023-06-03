@@ -911,6 +911,24 @@ class ArmorSeeder extends Seeder
                 "upgradable" => 1,
                 "armor_set_id" => $depthsSet,
             ],
+            [
+                "name" => "Well-Worn Hair Band",
+                "image" => "$prefix/TotK_Well-Worn_Hair_Band_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Lightning Helm",
+                "image" => "$prefix/TotK_Lightning_Helm_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Tunic of Memories",
+                "image" => "$prefix/TotK_Tunic_of_Memories_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => null,
+            ],
         ];
 
         Armor::upsert($armors, ['name'], ['image', 'upgradable', 'armor_set_id']);

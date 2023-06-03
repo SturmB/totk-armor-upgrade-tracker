@@ -117,6 +117,7 @@ class ArmorResourceSeeder extends Seeder
         $hoodOfTheDepths = Armor::where("name", "Hood of the Depths")->first()->id;
         $tunicOfTheDepths = Armor::where("name", "Tunic of the Depths")->first()->id;
         $gaitersOfTheDepths = Armor::where("name", "Gaiters of the Depths")->first()->id;
+        $tunicOfMemories = Armor::where("name", "Tunic of Memories")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -286,6 +287,8 @@ class ArmorResourceSeeder extends Seeder
         $obsidianFroxFang = Resource::where("name", "Obsidian Frox Fang")->first()->id;
         $blueWhiteFroxFang = Resource::where("name", "Blue-White Frox Fang")->first()->id;
         $froxGuts = Resource::where("name", "Frox Guts")->first()->id;
+        $naydrasHorn = Resource::where("name", "Naydra's Horn")->first()->id;
+        $dinraalsHorn = Resource::where("name", "Dinraal's Horn")->first()->id;
 
         $armorResources = new Collection();
 
@@ -1066,6 +1069,22 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($gaitersOfTheDepths, $depthsData),
+        );
+
+        $armorResources->push(
+            $this->buildArmorRequirements($tunicOfMemories, collect([
+                [1, $silentPrincess, 3],
+                [1, $lightDragonsScale, 1],
+                [2, $silentPrincess, 3],
+                [2, $lightDragonsTalon, 1],
+                [2, $faroshsHorn, 2],
+                [3, $silentPrincess, 5],
+                [3, $shardOfLightDragonsFang, 1],
+                [3, $naydrasHorn, 2],
+                [4, $silentPrincess, 10],
+                [4, $lightDragonsHorn, 1],
+                [4, $dinraalsHorn, 2],
+            ])),
         );
 
         // Populate the database.
