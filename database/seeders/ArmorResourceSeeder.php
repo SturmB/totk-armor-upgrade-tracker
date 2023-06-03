@@ -273,18 +273,26 @@ class ArmorResourceSeeder extends Seeder
         $whiteManedLynelMaceHorn = Resource::where("name", "White-Maned Lynel Mace Horn")->first()->id;
         $gibdoGuts = Resource::where("name", "Gibdo Guts")->first()->id;
         $heartyLizard = Resource::where("name", "Hearty Lizard")->first()->id;
+        $lightDragonsScale = Resource::where("name", "Light Dragon's Scale")->first()->id;
+        $lightDragonsTalon = Resource::where("name", "Light Dragon's Talon")->first()->id;
+        $shardOfLightDragonsFang = Resource::where("name", "Shard of Light Dragon's Fang")->first()->id;
+        $lightDragonsHorn = Resource::where("name", "Light Dragon's Horn")->first()->id;
 
         $armorResources = new Collection();
 
         $armorResources->push(
             $this->buildArmorRequirements($championsTunic, collect([
                 [1, $silentPrincess, 3],
+                [1, $lightDragonsScale, 2],
                 [2, $silentPrincess, 3],
-                [2, $shardOfFaroshsHorn, 2],
-                [3, $silentPrincess, 3],
-                [3, $shardOfNaydrasHorn, 2],
-                [4, $silentPrincess, 3],
-                [4, $shardOfDinraalsHorn, 2],
+                [2, $lightDragonsTalon, 2],
+                [2, $sundelion, 10],
+                [3, $silentPrincess, 5],
+                [3, $shardOfLightDragonsFang, 2],
+                [3, $sundelion, 15],
+                [4, $silentPrincess, 10],
+                [4, $lightDragonsHorn, 2],
+                [4, $sundelion, 20],
             ])),
         );
 

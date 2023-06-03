@@ -646,6 +646,22 @@ class ResourceSeeder extends Seeder
                 "name" => "Hearty Lizard",
                 "image" => "$prefix/TotK_Hearty_Lizard_Icon.png",
             ],
+            [
+                "name" => "Light Dragon's Scale",
+                "image" => "$prefix/TotK_Light_Dragon's_Scale_Icon.png",
+            ],
+            [
+                "name" => "Light Dragon's Talon",
+                "image" => "$prefix/TotK_Light_Dragon's_Talon_Icon.png",
+            ],
+            [
+                "name" => "Shard of Light Dragon's Fang",
+                "image" => "$prefix/TotK_Shard_of_Light_Dragon's_Fang_Icon.png",
+            ],
+            [
+                "name" => "Light Dragon's Horn",
+                "image" => "$prefix/TotK_Light_Dragon's_Horn_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);
