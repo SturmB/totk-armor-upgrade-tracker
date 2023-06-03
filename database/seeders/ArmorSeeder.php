@@ -886,6 +886,12 @@ class ArmorSeeder extends Seeder
                 "upgradable" => 1,
                 "armor_set_id" => $awakeningSet,
             ],
+            [
+                "name" => "Horriblin Mask",
+                "image" => "$prefix/TotK_Horriblin_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
         ];
 
         Armor::upsert($armors, ['name'], ['image', 'upgradable', 'armor_set_id']);
