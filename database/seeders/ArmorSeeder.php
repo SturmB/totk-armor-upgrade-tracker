@@ -57,6 +57,7 @@ class ArmorSeeder extends Seeder
         $zonaiteSet = ArmorSet::where("name", "Zonaite Set")->first()->id;
         $awakeningSet = ArmorSet::where("name", "Awakening Set")->first()->id;
         $depthsSet = ArmorSet::where("name", "Depths Set")->first()->id;
+        $yigaSet = ArmorSet::where("name", "Yiga Set")->first()->id;
 
         $armors = [
             [
@@ -928,6 +929,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Tunic_of_Memories_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => null,
+            ],
+            [
+                "name" => "Yiga Mask",
+                "image" => "$prefix/TotK_Yiga_Mask_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Yiga Armor",
+                "image" => "$prefix/TotK_Yiga_Armor_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Yiga Tights",
+                "image" => "$prefix/TotK_Yiga_Tights_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
             ],
         ];
 

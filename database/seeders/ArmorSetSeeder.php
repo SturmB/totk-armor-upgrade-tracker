@@ -170,6 +170,10 @@ class ArmorSetSeeder extends Seeder
                 "name" => "Depths Set",
                 "image" => null,
             ],
+            [
+                "name" => "Yiga Set",
+                "image" => null,
+            ],
         ];
 
         ArmorSet::upsert($armorSets, ['name'], ['image']);

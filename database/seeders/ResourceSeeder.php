@@ -694,6 +694,18 @@ class ResourceSeeder extends Seeder
                 "name" => "Dinraal's Horn",
                 "image" => "$prefix/TotK_Dinraal's_Horn_Icon.png",
             ],
+            [
+                "name" => "Puffshroom",
+                "image" => "$prefix/TotK_Puffshroom_Icon.png",
+            ],
+            [
+                "name" => "Black Hinox Horn",
+                "image" => "$prefix/TotK_Black_Hinox_Horn_Icon.png",
+            ],
+            [
+                "name" => "Mighty Bananas",
+                "image" => "$prefix/TotK_Mighty_Bananas_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

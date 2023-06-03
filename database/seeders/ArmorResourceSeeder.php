@@ -118,6 +118,9 @@ class ArmorResourceSeeder extends Seeder
         $tunicOfTheDepths = Armor::where("name", "Tunic of the Depths")->first()->id;
         $gaitersOfTheDepths = Armor::where("name", "Gaiters of the Depths")->first()->id;
         $tunicOfMemories = Armor::where("name", "Tunic of Memories")->first()->id;
+        $yigaMask = Armor::where("name", "Yiga Mask")->first()->id;
+        $yigaArmor = Armor::where("name", "Yiga Armor")->first()->id;
+        $yigaTights = Armor::where("name", "Yiga Tights")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -289,6 +292,9 @@ class ArmorResourceSeeder extends Seeder
         $froxGuts = Resource::where("name", "Frox Guts")->first()->id;
         $naydrasHorn = Resource::where("name", "Naydra's Horn")->first()->id;
         $dinraalsHorn = Resource::where("name", "Dinraal's Horn")->first()->id;
+        $puffshroom = Resource::where("name", "Puffshroom")->first()->id;
+        $blackHinoxHorn = Resource::where("name", "Black Hinox Horn")->first()->id;
+        $mightyBananas = Resource::where("name", "Mighty Bananas")->first()->id;
 
         $armorResources = new Collection();
 
@@ -1085,6 +1091,27 @@ class ArmorResourceSeeder extends Seeder
                 [4, $lightDragonsHorn, 1],
                 [4, $dinraalsHorn, 2],
             ])),
+        );
+
+        // Yiga Set
+        $yigaData = collect([
+            [1, $octorokEyeball, 2],
+            [2, $puffshroom, 3],
+            [2, $fireBreathLizalfosTail, 3],
+            [3, $iceBreathLizalfosTail, 5],
+            [3, $keeseEyeball, 5],
+            [4, $electricLizalfosTail, 5],
+            [4, $blackHinoxHorn, 3],
+            [4, $mightyBananas, 10],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($yigaMask, $yigaData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($yigaArmor, $yigaData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($yigaTights, $yigaData),
         );
 
         // Populate the database.
