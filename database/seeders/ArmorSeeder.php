@@ -56,6 +56,7 @@ class ArmorSeeder extends Seeder
         $mysticSet = ArmorSet::where("name", "Mystic Set")->first()->id;
         $zonaiteSet = ArmorSet::where("name", "Zonaite Set")->first()->id;
         $awakeningSet = ArmorSet::where("name", "Awakening Set")->first()->id;
+        $depthsSet = ArmorSet::where("name", "Depths Set")->first()->id;
 
         $armors = [
             [
@@ -891,6 +892,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Horriblin_Mask_Icon.png",
                 "upgradable" => 0,
                 "armor_set_id" => null,
+            ],
+            [
+                "name" => "Hood of the Depths",
+                "image" => "$prefix/TotK_Hood_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
+            ],
+            [
+                "name" => "Tunic of the Depths",
+                "image" => "$prefix/TotK_Tunic_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
+            ],
+            [
+                "name" => "Gaiters of the Depths",
+                "image" => "$prefix/TotK_Gaiters_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
             ],
         ];
 

@@ -662,6 +662,30 @@ class ResourceSeeder extends Seeder
                 "name" => "Light Dragon's Horn",
                 "image" => "$prefix/TotK_Light_Dragon's_Horn_Icon.png",
             ],
+            [
+                "name" => "Dark Clump",
+                "image" => "$prefix/TotK_Dark_Clump_Icon.png",
+            ],
+            [
+                "name" => "Frox Fang",
+                "image" => "$prefix/TotK_Frox_Fang_Icon.png",
+            ],
+            [
+                "name" => "Frox Fingernail",
+                "image" => "$prefix/TotK_Frox_Fingernail_Icon.png",
+            ],
+            [
+                "name" => "Obsidian Frox Fang",
+                "image" => "$prefix/TotK_Obsidian_Frox_Fang_Icon.png",
+            ],
+            [
+                "name" => "Blue-White Frox Fang",
+                "image" => "$prefix/TotK_Blue-White_Frox_Fang_Icon.png",
+            ],
+            [
+                "name" => "Frox Guts",
+                "image" => "$prefix/TotK_Frox_Guts_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

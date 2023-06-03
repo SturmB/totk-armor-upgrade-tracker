@@ -166,6 +166,10 @@ class ArmorSetSeeder extends Seeder
                 "name" => "Awakening Set",
                 "image" => null,
             ],
+            [
+                "name" => "Depths Set",
+                "image" => null,
+            ],
         ];
 
         ArmorSet::upsert($armorSets, ['name'], ['image']);

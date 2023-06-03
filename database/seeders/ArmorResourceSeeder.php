@@ -114,6 +114,9 @@ class ArmorResourceSeeder extends Seeder
         $maskOfAwakening = Armor::where("name", "Mask of Awakening")->first()->id;
         $tunicOfAwakening = Armor::where("name", "Tunic of Awakening")->first()->id;
         $trousersOfAwakening = Armor::where("name", "Trousers of Awakening")->first()->id;
+        $hoodOfTheDepths = Armor::where("name", "Hood of the Depths")->first()->id;
+        $tunicOfTheDepths = Armor::where("name", "Tunic of the Depths")->first()->id;
+        $gaitersOfTheDepths = Armor::where("name", "Gaiters of the Depths")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -277,6 +280,12 @@ class ArmorResourceSeeder extends Seeder
         $lightDragonsTalon = Resource::where("name", "Light Dragon's Talon")->first()->id;
         $shardOfLightDragonsFang = Resource::where("name", "Shard of Light Dragon's Fang")->first()->id;
         $lightDragonsHorn = Resource::where("name", "Light Dragon's Horn")->first()->id;
+        $darkClump = Resource::where("name", "Dark Clump")->first()->id;
+        $froxFang = Resource::where("name", "Frox Fang")->first()->id;
+        $froxFingernail = Resource::where("name", "Frox Fingernail")->first()->id;
+        $obsidianFroxFang = Resource::where("name", "Obsidian Frox Fang")->first()->id;
+        $blueWhiteFroxFang = Resource::where("name", "Blue-White Frox Fang")->first()->id;
+        $froxGuts = Resource::where("name", "Frox Guts")->first()->id;
 
         $armorResources = new Collection();
 
@@ -1025,7 +1034,7 @@ class ArmorResourceSeeder extends Seeder
             [3, $luminousStone, 20],
             [3, $starFragment, 1],
             [4, $luminousStone, 30],
-            [5, $starFragment, 1],
+            [4, $starFragment, 1],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($maskOfAwakening, $awakeningData),
@@ -1035,6 +1044,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($trousersOfAwakening, $awakeningData),
+        );
+
+        // Depths Set
+        $depthsData = collect([
+            [1, $deepFirefly, 3],
+            [2, $darkClump, 5],
+            [2, $froxFang, 3],
+            [3, $zonaite, 20],
+            [3, $froxFingernail, 3],
+            [3, $obsidianFroxFang, 3],
+            [4, $blueWhiteFroxFang, 5],
+            [4, $largeZonaite, 10],
+            [4, $froxGuts, 3],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($hoodOfTheDepths, $depthsData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($tunicOfTheDepths, $depthsData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($gaitersOfTheDepths, $depthsData),
         );
 
         // Populate the database.
