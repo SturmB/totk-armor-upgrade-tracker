@@ -572,9 +572,9 @@ class ArmorResourceSeeder extends Seeder
                 [1, $starFragment, 1],
                 [2, $silentPrincess, 2],
                 [2, $starFragment, 2],
-                [3, $silentPrincess, 3],
+                [3, $silentPrincess, 4],
                 [3, $starFragment, 3],
-                [4, $silentPrincess, 4],
+                [4, $silentPrincess, 8],
                 [4, $starFragment, 4],
             ])),
         );
@@ -626,33 +626,22 @@ class ArmorResourceSeeder extends Seeder
         // Fierce Deity Set
         $fierceDeityData = collect([
             [1, $hinoxToenail, 5],
+            [1, $dinraalsScale, 1],
             [2, $hinoxTooth, 5],
-            [3, $hinoxGuts, 5],
-            [4, $lynelGuts, 5],
+            [2, $dinraalsClaw, 1],
+            [3, $hinoxGuts, 2],
+            [3, $shardOfDinraalsFang, 1],
+            [4, $lynelGuts, 2],
+            [4, $dinraalsHorn, 1],
         ]);
         $armorResources->push(
-            $this->buildArmorRequirements($fierceDeityMask, $fierceDeityData->concat([
-                [1, $dinraalsScale, 1],
-                [2, $dinraalsClaw, 1],
-                [3, $shardOfDinraalsFang, 1],
-                [4, $shardOfDinraalsHorn, 1],
-            ])),
+            $this->buildArmorRequirements($fierceDeityMask, $fierceDeityData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($fierceDeityArmor, $fierceDeityData->concat([
-                [1, $naydrasScale, 1],
-                [2, $naydrasClaw, 1],
-                [3, $shardOfNaydrasFang, 1],
-                [4, $shardOfNaydrasHorn, 1],
-            ])),
+            $this->buildArmorRequirements($fierceDeityArmor, $fierceDeityData),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($fierceDeityBoots, $fierceDeityData->concat([
-                [1, $faroshsScale, 1],
-                [2, $faroshsClaw, 1],
-                [3, $shardOfFaroshsFang, 1],
-                [4, $shardOfFaroshsHorn, 1],
-            ])),
+            $this->buildArmorRequirements($fierceDeityBoots, $fierceDeityData),
         );
 
         // Radiant Set
@@ -740,14 +729,14 @@ class ArmorResourceSeeder extends Seeder
 
         // Hero of Time Set
         $heroOfTimeData = collect([
-            [1, $amber, 3],
+            [1, $amber, 10],
             [1, $starFragment, 1],
-            [2, $amber, 5],
-            [2, $starFragment, 2],
-            [3, $amber, 15],
-            [3, $starFragment, 3],
-            [4, $amber, 30],
-            [4, $starFragment, 4],
+            [2, $amber, 20],
+            [2, $starFragment, 1],
+            [3, $amber, 30],
+            [3, $starFragment, 1],
+            [4, $amber, 40],
+            [4, $starFragment, 1],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($capOfTime, $heroOfTimeData),
@@ -761,14 +750,14 @@ class ArmorResourceSeeder extends Seeder
 
         // Hero of Winds Set
         $heroOfTheWindsData = collect([
-            [1, $opal, 3],
+            [1, $opal, 5],
             [1, $starFragment, 1],
-            [2, $opal, 5],
-            [2, $starFragment, 2],
-            [3, $opal, 10],
-            [3, $starFragment, 3],
-            [4, $opal, 20],
-            [4, $starFragment, 4],
+            [2, $opal, 10],
+            [2, $starFragment, 1],
+            [3, $opal, 15],
+            [3, $starFragment, 1],
+            [4, $opal, 25],
+            [4, $starFragment, 1],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($capOfTheWind, $heroOfTheWindsData),
@@ -784,9 +773,9 @@ class ArmorResourceSeeder extends Seeder
         $heroOfTwilightData = collect([
             [1, $topaz, 1],
             [1, $starFragment, 1],
-            [2, $topaz, 3],
+            [2, $topaz, 4],
             [2, $starFragment, 1],
-            [3, $topaz, 5],
+            [3, $topaz, 6],
             [3, $starFragment, 1],
             [4, $topaz, 10],
             [4, $starFragment, 1],
@@ -805,12 +794,12 @@ class ArmorResourceSeeder extends Seeder
         $heroOfTheSkyData = collect([
             [1, $sapphire, 1],
             [1, $starFragment, 1],
-            [2, $sapphire, 3],
-            [2, $starFragment, 2],
-            [3, $sapphire, 5],
-            [3, $starFragment, 3],
+            [2, $sapphire, 4],
+            [2, $starFragment, 1],
+            [3, $sapphire, 6],
+            [3, $starFragment, 1],
             [4, $sapphire, 10],
-            [4, $starFragment, 4],
+            [4, $starFragment, 1],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($capOfTheSky, $heroOfTheSkyData),
@@ -826,12 +815,12 @@ class ArmorResourceSeeder extends Seeder
         $heroData = collect([
             [1, $ruby, 1],
             [1, $starFragment, 1],
-            [2, $ruby, 3],
-            [2, $starFragment, 2],
-            [3, $ruby, 5],
-            [3, $starFragment, 3],
+            [2, $ruby, 4],
+            [2, $starFragment, 1],
+            [3, $ruby, 6],
+            [3, $starFragment, 1],
             [4, $ruby, 10],
-            [4, $starFragment, 4],
+            [4, $starFragment, 1],
         ]);
         $armorResources->push(
             $this->buildArmorRequirements($capOfTheHero, $heroData),
