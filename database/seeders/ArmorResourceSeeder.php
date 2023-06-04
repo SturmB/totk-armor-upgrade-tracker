@@ -718,14 +718,13 @@ class ArmorResourceSeeder extends Seeder
 
         $armorResources->push(
             $this->buildArmorRequirements($snowBoots, collect([
-                [1, $octorokTentacle, 5],
-                [1, $hightailLizard, 10],
-                [2, $octoBalloon, 5],
-                [2, $swiftCarrot, 10],
-                [3, $octorokEyeball, 5],
-                [3, $rushroom, 15],
+                [1, $hightailLizard, 3],
+                [2, $octorokTentacle, 5],
+                [2, $swiftCarrot, 5],
+                [3, $octoBalloon, 5],
+                [3, $rushroom, 20],
                 [4, $naydrasScale, 2],
-                [4, $swiftViolet, 15],
+                [4, $swiftViolet, 20],
             ])),
         );
 
