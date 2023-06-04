@@ -58,6 +58,7 @@ class ArmorSeeder extends Seeder
         $awakeningSet = ArmorSet::where("name", "Awakening Set")->first()->id;
         $depthsSet = ArmorSet::where("name", "Depths Set")->first()->id;
         $yigaSet = ArmorSet::where("name", "Yiga Set")->first()->id;
+        $evilSpiritSet = ArmorSet::where("name", "Evil Spirit Set")->first()->id;
 
         $armors = [
             [
@@ -947,6 +948,24 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Yiga_Tights_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Evil Spirit Mask",
+                "image" => "$prefix/TotK_Evil_Spirit_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
+            ],
+            [
+                "name" => "Evil Spirit Armor",
+                "image" => "$prefix/TotK_Evil_Spirit_Armor_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
+            ],
+            [
+                "name" => "Evil Spirit Greaves",
+                "image" => "$prefix/TotK_Evil_Spirit_Greaves_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
             ],
         ];
 
