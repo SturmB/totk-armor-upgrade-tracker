@@ -33,7 +33,6 @@ class ArmorSeeder extends Seeder
         $barbarianSet = ArmorSet::where("name", "Barbarian Set")->first()->id;
         $fierceDeitySet = ArmorSet::where("name", "Fierce Deity Set")->first()->id;
         $radiantSet = ArmorSet::where("name", "Radiant Set")->first()->id;
-        $ancientSet = ArmorSet::where("name", "Ancient Set")->first()->id;
         $darkSet = ArmorSet::where("name", "Dark Set")->first()->id;
         $heroOfTimeSet = ArmorSet::where("name", "Hero of Time Set")->first()->id;
         $heroOfWindsSet = ArmorSet::where("name", "Hero of Winds Set")->first()->id;
@@ -360,24 +359,6 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/BotW_Diamond_Circlet_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => null,
-            ],
-            [
-                "name" => "Ancient Helm",
-                "image" => "$prefix/BotW_Ancient_Helm_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
-            ],
-            [
-                "name" => "Ancient Cuirass",
-                "image" => "$prefix/BotW_Ancient_Cuirass_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
-            ],
-            [
-                "name" => "Ancient Greaves",
-                "image" => "$prefix/BotW_Ancient_Greaves_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
             ],
             [
                 "name" => "Sand Boots",

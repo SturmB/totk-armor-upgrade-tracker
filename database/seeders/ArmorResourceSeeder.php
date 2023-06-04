@@ -63,9 +63,6 @@ class ArmorResourceSeeder extends Seeder
         $radiantShirt = Armor::where("name", "Radiant Shirt")->first()->id;
         $radiantTights = Armor::where("name", "Radiant Tights")->first()->id;
         $diamondCirclet = Armor::where("name", "Diamond Circlet")->first()->id;
-        $ancientHelm = Armor::where("name", "Ancient Helm")->first()->id;
-        $ancientCuirass = Armor::where("name", "Ancient Cuirass")->first()->id;
-        $ancientGreaves = Armor::where("name", "Ancient Greaves")->first()->id;
         $sandBoots = Armor::where("name", "Sand Boots")->first()->id;
         $snowBoots = Armor::where("name", "Snow Boots")->first()->id;
         $capOfTime = Armor::where("name", "Cap of Time")->first()->id;
@@ -678,27 +675,6 @@ class ArmorResourceSeeder extends Seeder
                 [4, $diamond, 8],
                 [4, $starFragment, 2],
             ])),
-        );
-
-        // Ancient Set
-        $ancientData = collect([
-            [1, $ancientScrew, 5],
-            [1, $ancientSpring, 5],
-            [2, $ancientSpring, 15],
-            [2, $ancientGear, 10],
-            [3, $ancientShaft, 15],
-            [3, $ancientCore, 5],
-            [4, $starFragment, 1],
-            [4, $giantAncientCore, 2],
-        ]);
-        $armorResources->push(
-            $this->buildArmorRequirements($ancientHelm, $ancientData),
-        );
-        $armorResources->push(
-            $this->buildArmorRequirements($ancientCuirass, $ancientData),
-        );
-        $armorResources->push(
-            $this->buildArmorRequirements($ancientGreaves, $ancientData),
         );
 
         $armorResources->push(
