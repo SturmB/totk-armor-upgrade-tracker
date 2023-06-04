@@ -35,13 +35,13 @@ class ArmorResourceSeeder extends Seeder
         $desertVoeHeadband = Armor::where("name", "Desert Voe Headband")->first()->id;
         $desertVoeSpaulder = Armor::where("name", "Desert Voe Spaulder")->first()->id;
         $desertVoeTrousers = Armor::where("name", "Desert Voe Trousers")->first()->id;
+        $flamebreakerHelm = Armor::where("name", "Flamebreaker Helm")->first()->id;
+        $flamebreakerArmor = Armor::where("name", "Flamebreaker Armor")->first()->id;
+        $flamebreakerBoots = Armor::where("name", "Flamebreaker Boots")->first()->id;
         $topazEarrings = Armor::where("name", "Topaz Earrings")->first()->id;
         $rubberHelm = Armor::where("name", "Rubber Helm")->first()->id;
         $rubberArmor = Armor::where("name", "Rubber Armor")->first()->id;
         $rubberTights = Armor::where("name", "Rubber Tights")->first()->id;
-        $flamebreakerHelm = Armor::where("name", "Flamebreaker Helm")->first()->id;
-        $flamebreakerArmor = Armor::where("name", "Flamebreaker Armor")->first()->id;
-        $flamebreakerBoots = Armor::where("name", "Flamebreaker Boots")->first()->id;
         $opalEarrings = Armor::where("name", "Opal Earrings")->first()->id;
         $zoraHelm = Armor::where("name", "Zora Helm")->first()->id;
         $zoraArmor = Armor::where("name", "Zora Armor")->first()->id;
@@ -436,6 +436,28 @@ class ArmorResourceSeeder extends Seeder
             $this->buildArmorRequirements($desertVoeTrousers, $desertVoeData),
         );
 
+        // Flamebreaker Set
+        $flamebreakerData = collect([
+            [1, $moblinHorn, 3],
+            [2, $moblinFang, 5],
+            [2, $fireproofLizard, 5],
+            [3, $blueMoblinHorn, 5],
+            [3, $flint, 15],
+            [3, $smotherwingButterfly, 3],
+            [4, $fireBreathLizalfosHorn, 5],
+            [4, $fireBreathLizalfosTail, 10],
+            [4, $ruby, 5],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($flamebreakerHelm, $flamebreakerData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($flamebreakerArmor, $flamebreakerData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($flamebreakerBoots, $flamebreakerData),
+        );
+
         $armorResources->push(
             $this->buildArmorRequirements($topazEarrings, collect([
                 [1, $topaz, 2],
@@ -470,28 +492,6 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($rubberTights, $rubberData),
-        );
-
-        // Flamebreaker Set
-        $flamebreakerData = collect([
-            [1, $moblinHorn, 3],
-            [2, $moblinFang, 5],
-            [2, $fireproofLizard, 5],
-            [3, $blueMoblinHorn, 5],
-            [3, $flint, 15],
-            [3, $smotherwingButterfly, 3],
-            [4, $fireBreathLizalfosHorn, 5],
-            [4, $fireBreathLizalfosTail, 10],
-            [4, $ruby, 5],
-        ]);
-        $armorResources->push(
-            $this->buildArmorRequirements($flamebreakerHelm, $flamebreakerData),
-        );
-        $armorResources->push(
-            $this->buildArmorRequirements($flamebreakerArmor, $flamebreakerData),
-        );
-        $armorResources->push(
-            $this->buildArmorRequirements($flamebreakerBoots, $flamebreakerData),
         );
 
         $armorResources->push(

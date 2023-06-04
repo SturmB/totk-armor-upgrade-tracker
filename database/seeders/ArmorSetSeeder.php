@@ -43,12 +43,12 @@ class ArmorSetSeeder extends Seeder
                 "image" => "$prefix/BotW_Link_Wearing_Gerudo_Set.jpg",
             ],
             [
-                "name" => "Rubber Set",
-                "image" => "$prefix/BotW_Link_Wearing_Rubber_Armor.jpg",
-            ],
-            [
                 "name" => "Flamebreaker Set",
                 "image" => "$prefix/BotW_Link_Wearing_Flamebreaker_Set.jpg",
+            ],
+            [
+                "name" => "Rubber Set",
+                "image" => "$prefix/BotW_Link_Wearing_Rubber_Armor.jpg",
             ],
             [
                 "name" => "Zora Set",
