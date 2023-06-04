@@ -115,10 +115,6 @@ class ArmorSetSeeder extends Seeder
                 "image" => "$prefix/BotW_Royal_Guard_Set_Concept_Artwork.png",
             ],
             [
-                "name" => "Phantom Ganon Set",
-                "image" => null,
-            ],
-            [
                 "name" => "Salvager's Set",
                 "image" => null,
             ],
