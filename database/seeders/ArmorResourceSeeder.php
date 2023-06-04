@@ -139,15 +139,12 @@ class ArmorResourceSeeder extends Seeder
         $dinraalsScale = Resource::where("name", "Dinraal's Scale")->first()->id;
         $dinraalsClaw = Resource::where("name", "Dinraal's Claw")->first()->id;
         $shardOfDinraalsFang = Resource::where("name", "Shard of Dinraal's Fang")->first()->id;
-        $shardOfDinraalsHorn = Resource::where("name", "Shard of Dinraal's Horn")->first()->id;
         $naydrasScale = Resource::where("name", "Naydra's Scale")->first()->id;
         $naydrasClaw = Resource::where("name", "Naydra's Claw")->first()->id;
         $shardOfNaydrasFang = Resource::where("name", "Shard of Naydra's Fang")->first()->id;
-        $shardOfNaydrasHorn = Resource::where("name", "Shard of Naydra's Horn")->first()->id;
         $faroshsScale = Resource::where("name", "Farosh's Scale")->first()->id;
         $faroshsClaw = Resource::where("name", "Farosh's Claw")->first()->id;
         $shardOfFaroshsFang = Resource::where("name", "Shard of Farosh's Fang")->first()->id;
-        $shardOfFaroshsHorn = Resource::where("name", "Shard of Farosh's Horn")->first()->id;
         $heartyBass = Resource::where("name", "Hearty Bass")->first()->id;
         $hyruleBass = Resource::where("name", "Hyrule Bass")->first()->id;
         $stealthfinTrout = Resource::where("name", "Stealthfin Trout")->first()->id;
@@ -181,10 +178,6 @@ class ArmorResourceSeeder extends Seeder
         $lizalfosTalon = Resource::where("name", "Lizalfos Talon")->first()->id;
         $lizalfosTail = Resource::where("name", "Lizalfos Tail")->first()->id;
         $blueLizalfosTail = Resource::where("name", "Blue Lizalfos Tail")->first()->id;
-        $icyLizalfosTail = Resource::where("name", "Icy Lizalfos Tail")->first()->id;
-        $redLizalfosTail = Resource::where("name", "Red Lizalfos Tail")->first()->id;
-        $yellowLizalfosTail = Resource::where("name", "Yellow Lizalfos Tail")->first()->id;
-        $lynelHorn = Resource::where("name", "Lynel Horn")->first()->id;
         $lynelHoof = Resource::where("name", "Lynel Hoof")->first()->id;
         $lynelGuts = Resource::where("name", "Lynel Guts")->first()->id;
         $chuchuJelly = Resource::where("name", "Chuchu Jelly")->first()->id;
@@ -204,12 +197,7 @@ class ArmorResourceSeeder extends Seeder
         $hinoxToenail = Resource::where("name", "Hinox Toenail")->first()->id;
         $hinoxTooth = Resource::where("name", "Hinox Tooth")->first()->id;
         $hinoxGuts = Resource::where("name", "Hinox Guts")->first()->id;
-        $ancientScrew = Resource::where("name", "Ancient Screw")->first()->id;
-        $ancientSpring = Resource::where("name", "Ancient Spring")->first()->id;
-        $ancientGear = Resource::where("name", "Ancient Gear")->first()->id;
-        $ancientShaft = Resource::where("name", "Ancient Shaft")->first()->id;
-        $ancientCore = Resource::where("name", "Ancient Core")->first()->id;
-        $giantAncientCore = Resource::where("name", "Giant Ancient Core")->first()->id;
+        // New stuff starts
         $aerocudaEyeball = Resource::where("name", "Aerocuda Eyeball")->first()->id;
         $aerocudaWing = Resource::where("name", "Aerocuda Wing")->first()->id;
         $gibdoWing = Resource::where("name", "Gibdo Wing")->first()->id;

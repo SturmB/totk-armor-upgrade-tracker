@@ -83,10 +83,6 @@ class ResourceSeeder extends Seeder
                 "image" => "$prefix/BotW_Shard_of_Dinraal's_Fang_Icon.png",
             ],
             [
-                "name" => "Shard of Dinraal's Horn",
-                "image" => "$prefix/BotW_Shard_of_Dinraal's_Horn_Icon.png",
-            ],
-            [
                 "name" => "Naydra's Scale",
                 "image" => "$prefix/BotW_Naydra's_Scale_Icon.png",
             ],
@@ -99,10 +95,6 @@ class ResourceSeeder extends Seeder
                 "image" => "$prefix/BotW_Shard_of_Naydra's_Fang_Icon.png",
             ],
             [
-                "name" => "Shard of Naydra's Horn",
-                "image" => "$prefix/BotW_Shard_of_Naydra's_Horn_Icon.png",
-            ],
-            [
                 "name" => "Farosh's Scale",
                 "image" => "$prefix/BotW_Farosh's_Scale_Icon.png",
             ],
@@ -113,10 +105,6 @@ class ResourceSeeder extends Seeder
             [
                 "name" => "Shard of Farosh's Fang",
                 "image" => "$prefix/BotW_Shard_of_Farosh's_Fang_Icon.png",
-            ],
-            [
-                "name" => "Shard of Farosh's Horn",
-                "image" => "$prefix/BotW_Shard_of_Farosh's_Horn_Icon.png",
             ],
             [
                 "name" => "Hearty Bass",
@@ -251,22 +239,6 @@ class ResourceSeeder extends Seeder
                 "image" => "$prefix/TotK_Blue_Lizalfos_Tail_Icon.png",
             ],
             [
-                "name" => "Icy Lizalfos Tail",
-                "image" => "$prefix/BotW_Icy_Lizalfos_Tail_Icon.png",
-            ],
-            [
-                "name" => "Red Lizalfos Tail",
-                "image" => "$prefix/BotW_Red_Lizalfos_Tail_Icon.png",
-            ],
-            [
-                "name" => "Yellow Lizalfos Tail",
-                "image" => "$prefix/BotW_Yellow_Lizalfos_Tail_Icon.png",
-            ],
-            [
-                "name" => "Lynel Horn",
-                "image" => "$prefix/BotW_Lynel_Horn_Icon.png",
-            ],
-            [
                 "name" => "Lynel Hoof",
                 "image" => "$prefix/BotW_Lynel_Hoof_Icon.png",
             ],
@@ -342,30 +314,7 @@ class ResourceSeeder extends Seeder
                 "name" => "Hinox Guts",
                 "image" => "$prefix/BotW_Hinox_Guts_Icon.png",
             ],
-            [
-                "name" => "Ancient Screw",
-                "image" => "$prefix/BotW_Ancient_Screw_Icon.png",
-            ],
-            [
-                "name" => "Ancient Spring",
-                "image" => "$prefix/BotW_Ancient_Spring_Icon.png",
-            ],
-            [
-                "name" => "Ancient Gear",
-                "image" => "$prefix/BotW_Ancient_Gear_Icon.png",
-            ],
-            [
-                "name" => "Ancient Shaft",
-                "image" => "$prefix/BotW_Ancient_Shaft_Icon.png",
-            ],
-            [
-                "name" => "Ancient Core",
-                "image" => "$prefix/BotW_Ancient_Core_Icon.png",
-            ],
-            [
-                "name" => "Giant Ancient Core",
-                "image" => "$prefix/BotW_Giant_Ancient_Core_Icon.png",
-            ],
+            // New stuff begins
             [
                 "name" => "Aerocuda Wing",
                 "image" => "$prefix/TotK_Aerocuda_Wing_Icon.png",
