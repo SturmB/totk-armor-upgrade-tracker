@@ -304,6 +304,7 @@ class ArmorResourceSeeder extends Seeder
         $blackBossBokoblinHorn = Resource::where("name", "Black Boss Bokoblin Horn")->first()->id;
         $silverBossBokoblinHorn = Resource::where("name", "Silver Boss Bokoblin Horn")->first()->id;
         $gleeokGuts = Resource::where("name", "Gleeok Guts")->first()->id;
+        $dazzlefruit = Resource::where("name", "Dazzlefruit")->first()->id;
 
         $armorResources = new Collection();
 
@@ -867,26 +868,44 @@ class ArmorResourceSeeder extends Seeder
 
         // Divine Helms
         $divineHelmData = collect([
-            [1, $ancientScrew, 5],
-            [1, $ancientSpring, 5],
-            [2, $ancientSpring, 15],
-            [2, $ancientGear, 10],
-            [3, $ancientShaft, 15],
-            [3, $ancientCore, 5],
-            [4, $starFragment, 1],
-            [4, $giantAncientCore, 2],
+            [1, $zonaite, 5],
+            [2, $zonaite, 10],
+            [3, $largeZonaite, 5],
+            [3, $dazzlefruit, 5],
+            [4, $largeZonaite, 10],
+            [4, $dazzlefruit, 10],
         ]);
         $armorResources->push(
-            $this->buildArmorRequirements($vahRutaDivineHelm, $divineHelmData),
+            $this->buildArmorRequirements($vahRutaDivineHelm, $divineHelmData->concat([
+                [1, $opal, 5],
+                [2, $opal, 10],
+                [3, $opal, 15],
+                [4, $opal, 25],
+            ])),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($vahMedohDivineHelm, $divineHelmData),
+            $this->buildArmorRequirements($vahMedohDivineHelm, $divineHelmData->concat([
+                [1, $sapphire, 1],
+                [2, $sapphire, 4],
+                [3, $sapphire, 6],
+                [4, $sapphire, 10],
+            ])),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($vahRudaniaDivineHelm, $divineHelmData),
+            $this->buildArmorRequirements($vahRudaniaDivineHelm, $divineHelmData->concat([
+                [1, $ruby, 1],
+                [2, $ruby, 4],
+                [3, $ruby, 6],
+                [4, $ruby, 10],
+            ])),
         );
         $armorResources->push(
-            $this->buildArmorRequirements($vahNaborisDivineHelm, $divineHelmData),
+            $this->buildArmorRequirements($vahNaborisDivineHelm, $divineHelmData->concat([
+                [1, $topaz, 1],
+                [2, $topaz, 4],
+                [3, $topaz, 6],
+                [4, $topaz, 10],
+            ])),
         );
 
         // Glide Set
