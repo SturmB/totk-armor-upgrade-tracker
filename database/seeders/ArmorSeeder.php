@@ -18,8 +18,6 @@ class ArmorSeeder extends Seeder
     {
         $prefix = "armors";
 
-        $wellWornOutfit = ArmorSet::where("name", "Well-Worn Outfit")->first()
-            ->id;
         $hylianSet = ArmorSet::where("name", "Hylian Set")->first()->id;
         $soldiersSet = ArmorSet::where("name", "Soldier's Set")->first()->id;
         $snowquillSet = ArmorSet::where("name", "Snowquill Set")->first()->id;
@@ -59,18 +57,6 @@ class ArmorSeeder extends Seeder
         $evilSpiritSet = ArmorSet::where("name", "Evil Spirit Set")->first()->id;
 
         $armors = [
-            [
-                "name" => "Old Shirt",
-                "image" => "$prefix/BotW_Old_Shirt_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $wellWornOutfit,
-            ],
-            [
-                "name" => "Well-Worn Trousers",
-                "image" => "$prefix/BotW_Well-Worn_Trousers_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $wellWornOutfit,
-            ],
             [
                 "name" => "Champion's Tunic",
                 "image" => "$prefix/BotW_Champion's_Tunic_Icon.png",

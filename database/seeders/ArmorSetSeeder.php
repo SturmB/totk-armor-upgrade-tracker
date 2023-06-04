@@ -19,8 +19,8 @@ class ArmorSetSeeder extends Seeder
 
         $armorSets = [
             [
-                "name" => "Well-Worn Outfit",
-                "image" => "$prefix/BotW_Link_Wearing_Well-Worn_Outfit.jpg",
+                "name" => "Archaic Set",
+                "image" => null,
             ],
             [
                 "name" => "Hylian Set",
@@ -120,10 +120,6 @@ class ArmorSetSeeder extends Seeder
             ],
             [
                 "name" => "Glide Set",
-                "image" => null,
-            ],
-            [
-                "name" => "Archaic Set",
                 "image" => null,
             ],
             [
