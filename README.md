@@ -27,5 +27,6 @@ There are several things that I need to address after launching this app.
 - [ ] Organize the resources by type (as much as I can).
 - [ ] Make image sizes consistent.
 - [ ] Fix caching to address Redis value size limitation.
+- [ ] Add new armor set images.
 - [ ] Add a tri-state checkbox for each armor set to select/deselect all armors in that set.
 - [ ] Replace the apparently abandoned [Livewire Range Slider](https://github.com/jantinnerezo/livewire-range-slider) with a pure-JavaScript usage of the [noUiSlider](https://refreshless.com/nouislider/).
