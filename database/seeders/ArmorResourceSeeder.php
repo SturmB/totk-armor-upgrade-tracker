@@ -121,6 +121,9 @@ class ArmorResourceSeeder extends Seeder
         $yigaMask = Armor::where("name", "Yiga Mask")->first()->id;
         $yigaArmor = Armor::where("name", "Yiga Armor")->first()->id;
         $yigaTights = Armor::where("name", "Yiga Tights")->first()->id;
+        $royalGuardCap = Armor::where("name", "Royal Guard Cap")->first()->id;
+        $royalGuardUniform = Armor::where("name", "Royal Guard Uniform")->first()->id;
+        $royalGuardBoots = Armor::where("name", "Royal Guard Boots")->first()->id;
 
         // Resources
         $voltfruit = Resource::where("name", "Voltfruit")->first()->id;
@@ -295,6 +298,12 @@ class ArmorResourceSeeder extends Seeder
         $puffshroom = Resource::where("name", "Puffshroom")->first()->id;
         $blackHinoxHorn = Resource::where("name", "Black Hinox Horn")->first()->id;
         $mightyBananas = Resource::where("name", "Mighty Bananas")->first()->id;
+        $bossBokoblinHorn = Resource::where("name", "Boss Bokoblin Horn")->first()->id;
+        $blueBossBokoblinHorn = Resource::where("name", "Blue Boss Bokoblin Horn")->first()->id;
+        $bossBokoblinFang = Resource::where("name", "Boss Bokoblin Fang")->first()->id;
+        $blackBossBokoblinHorn = Resource::where("name", "Black Boss Bokoblin Horn")->first()->id;
+        $silverBossBokoblinHorn = Resource::where("name", "Silver Boss Bokoblin Horn")->first()->id;
+        $gleeokGuts = Resource::where("name", "Gleeok Guts")->first()->id;
 
         $armorResources = new Collection();
 
@@ -1111,6 +1120,28 @@ class ArmorResourceSeeder extends Seeder
         );
         $armorResources->push(
             $this->buildArmorRequirements($yigaTights, $yigaData),
+        );
+
+        // Royal Guard Set
+        $royalGuardData = collect([
+            [1, $bokoblinGuts, 3],
+            [1, $bossBokoblinHorn, 3],
+            [2, $blueBossBokoblinHorn, 3],
+            [2, $bossBokoblinFang, 3],
+            [3, $blackBossBokoblinHorn, 3],
+            [3, $hinoxGuts, 3],
+            [4, $silverBossBokoblinHorn, 3],
+            [4, $moldugaGuts, 3],
+            [4, $gleeokGuts, 3],
+        ]);
+        $armorResources->push(
+            $this->buildArmorRequirements($royalGuardCap, $royalGuardData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($royalGuardUniform, $royalGuardData),
+        );
+        $armorResources->push(
+            $this->buildArmorRequirements($royalGuardBoots, $royalGuardData),
         );
 
         // Populate the database.

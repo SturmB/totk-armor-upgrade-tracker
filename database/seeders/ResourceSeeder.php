@@ -706,6 +706,30 @@ class ResourceSeeder extends Seeder
                 "name" => "Mighty Bananas",
                 "image" => "$prefix/TotK_Mighty_Bananas_Icon.png",
             ],
+            [
+                "name" => "Boss Bokoblin Horn",
+                "image" => "$prefix/TotK_Boss_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Blue Boss Bokoblin Horn",
+                "image" => "$prefix/TotK_Blue_Boss_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Boss Bokoblin Fang",
+                "image" => "$prefix/TotK_Boss_Bokoblin_Fang_Icon.png",
+            ],
+            [
+                "name" => "Black Boss Bokoblin Horn",
+                "image" => "$prefix/TotK_Black_Boss_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Silver Boss Bokoblin Horn",
+                "image" => "$prefix/TotK_Silver_Boss_Bokoblin_Horn_Icon.png",
+            ],
+            [
+                "name" => "Gleeok Guts",
+                "image" => "$prefix/TotK_Gleeok_Guts_Icon.png",
+            ],
         ];
 
         Resource::upsert($resources, ['name'], ['image']);

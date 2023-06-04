@@ -621,19 +621,19 @@ class ArmorSeeder extends Seeder
             [
                 "name" => "Royal Guard Cap",
                 "image" => "$prefix/BotW_Royal_Guard_Cap_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
             ],
             [
                 "name" => "Royal Guard Uniform",
                 "image" => "$prefix/BotW_Royal_Guard_Uniform_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
             ],
             [
                 "name" => "Royal Guard Boots",
                 "image" => "$prefix/BotW_Royal_Guard_Boots_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
             ],
             [
