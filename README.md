@@ -18,9 +18,15 @@ Please file all bug reports, issues, and feature requests using the [Issues](htt
 
 There are several things that I need to address after launching this app.
 
-- [ ] Add as many armors and resources as possible before launch.
+- [x] Add new armors and resources (as many as possible before launch).
 - [ ] Make the sliders accept variable min & max tiers.
 - [ ] Change color scheme for TotK.
 - [ ] Update logo and branding for TotK.
+- [x] Update existing armor requirements for TotK.
+- [x] Organize the armors by set (as much as I can).
+- [x] Organize the resources by type (as much as I can).
+- [ ] Make image sizes consistent.
+- [ ] Fix caching to address Redis value size limitation.
+- [ ] Add new armor set images.
 - [ ] Add a tri-state checkbox for each armor set to select/deselect all armors in that set.
 - [ ] Replace the apparently abandoned [Livewire Range Slider](https://github.com/jantinnerezo/livewire-range-slider) with a pure-JavaScript usage of the [noUiSlider](https://refreshless.com/nouislider/).

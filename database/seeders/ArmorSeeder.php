@@ -18,22 +18,20 @@ class ArmorSeeder extends Seeder
     {
         $prefix = "armors";
 
-        $wellWornOutfit = ArmorSet::where("name", "Well-Worn Outfit")->first()
-            ->id;
+        $archaicSet = ArmorSet::where("name", "Archaic Set")->first()->id;
         $hylianSet = ArmorSet::where("name", "Hylian Set")->first()->id;
         $soldiersSet = ArmorSet::where("name", "Soldier's Set")->first()->id;
         $snowquillSet = ArmorSet::where("name", "Snowquill Set")->first()->id;
         $desertVoeSet = ArmorSet::where("name", "Desert Voe Set")->first()->id;
         $gerudoSet = ArmorSet::where("name", "Gerudo Set")->first()->id;
-        $rubberSet = ArmorSet::where("name", "Rubber Set")->first()->id;
         $flamebreakerSet = ArmorSet::where("name", "Flamebreaker Set")->first()->id;
+        $rubberSet = ArmorSet::where("name", "Rubber Set")->first()->id;
         $zoraSet = ArmorSet::where("name", "Zora Set")->first()->id;
         $stealthSet = ArmorSet::where("name", "Stealth Set")->first()->id;
         $climbingSet = ArmorSet::where("name", "Climbing Set")->first()->id;
         $barbarianSet = ArmorSet::where("name", "Barbarian Set")->first()->id;
         $fierceDeitySet = ArmorSet::where("name", "Fierce Deity Set")->first()->id;
         $radiantSet = ArmorSet::where("name", "Radiant Set")->first()->id;
-        $ancientSet = ArmorSet::where("name", "Ancient Set")->first()->id;
         $darkSet = ArmorSet::where("name", "Dark Set")->first()->id;
         $heroOfTimeSet = ArmorSet::where("name", "Hero of Time Set")->first()->id;
         $heroOfWindsSet = ArmorSet::where("name", "Hero of Winds Set")->first()->id;
@@ -44,24 +42,38 @@ class ArmorSeeder extends Seeder
         $tinglesSet = ArmorSet::where("name", "Tingle's Set")->first()->id;
         $phantomEquipment = ArmorSet::where("name", "Phantom Equipment")->first()->id;
         $royalGuardSet = ArmorSet::where("name", "Royal Guard Set")->first()->id;
-        $phantomGanonSet = ArmorSet::where("name", "Phantom Ganon Set")->first()->id;
         $salvagersSet = ArmorSet::where("name", "Salvager's Set")->first()->id;
         $glideSet = ArmorSet::where("name", "Glide Set")->first()->id;
-        $archaicSet = ArmorSet::where("name", "Archaic Set")->first()->id;
         $froggySet = ArmorSet::where("name", "Froggy Set")->first()->id;
+        $minersSet = ArmorSet::where("name", "Miner's Set")->first()->id;
+        $emberSet = ArmorSet::where("name", "Ember Set")->first()->id;
+        $chargedSet = ArmorSet::where("name", "Charged Set")->first()->id;
+        $frostbiteSet = ArmorSet::where("name", "Frostbite Set")->first()->id;
+        $mysticSet = ArmorSet::where("name", "Mystic Set")->first()->id;
+        $zonaiteSet = ArmorSet::where("name", "Zonaite Set")->first()->id;
+        $awakeningSet = ArmorSet::where("name", "Awakening Set")->first()->id;
+        $depthsSet = ArmorSet::where("name", "Depths Set")->first()->id;
+        $yigaSet = ArmorSet::where("name", "Yiga Set")->first()->id;
+        $evilSpiritSet = ArmorSet::where("name", "Evil Spirit Set")->first()->id;
 
         $armors = [
             [
-                "name" => "Old Shirt",
-                "image" => "$prefix/BotW_Old_Shirt_Icon.png",
+                "name" => "Archaic Tunic",
+                "image" => "$prefix/TotK_Archaic_Tunic_Icon.png",
                 "upgradable" => 0,
-                "armor_set_id" => $wellWornOutfit,
+                "armor_set_id" => $archaicSet,
             ],
             [
-                "name" => "Well-Worn Trousers",
-                "image" => "$prefix/BotW_Well-Worn_Trousers_Icon.png",
+                "name" => "Archaic Legwear",
+                "image" => "$prefix/TotK_Archaic_Legwear_Icon.png",
                 "upgradable" => 0,
-                "armor_set_id" => $wellWornOutfit,
+                "armor_set_id" => $archaicSet,
+            ],
+            [
+                "name" => "Archaic Warm Greaves",
+                "image" => "$prefix/TotK_Archaic_Warm_Greaves_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
             ],
             [
                 "name" => "Champion's Tunic",
@@ -178,6 +190,24 @@ class ArmorSeeder extends Seeder
                 "armor_set_id" => $gerudoSet,
             ],
             [
+                "name" => "Flamebreaker Helm",
+                "image" => "$prefix/BotW_Flamebreaker_Helm_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $flamebreakerSet,
+            ],
+            [
+                "name" => "Flamebreaker Armor",
+                "image" => "$prefix/BotW_Flamebreaker_Armor_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $flamebreakerSet,
+            ],
+            [
+                "name" => "Flamebreaker Boots",
+                "image" => "$prefix/BotW_Flamebreaker_Boots_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $flamebreakerSet,
+            ],
+            [
                 "name" => "Topaz Earrings",
                 "image" => "$prefix/BotW_Topaz_Earrings_Icon.png",
                 "upgradable" => 1,
@@ -200,24 +230,6 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/BotW_Rubber_Tights_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $rubberSet,
-            ],
-            [
-                "name" => "Flamebreaker Helm",
-                "image" => "$prefix/BotW_Flamebreaker_Helm_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $flamebreakerSet,
-            ],
-            [
-                "name" => "Flamebreaker Armor",
-                "image" => "$prefix/BotW_Flamebreaker_Armor_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $flamebreakerSet,
-            ],
-            [
-                "name" => "Flamebreaker Boots",
-                "image" => "$prefix/BotW_Flamebreaker_Boots_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $flamebreakerSet,
             ],
             [
                 "name" => "Opal Earrings",
@@ -352,24 +364,6 @@ class ArmorSeeder extends Seeder
                 "armor_set_id" => null,
             ],
             [
-                "name" => "Ancient Helm",
-                "image" => "$prefix/BotW_Ancient_Helm_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
-            ],
-            [
-                "name" => "Ancient Cuirass",
-                "image" => "$prefix/BotW_Ancient_Cuirass_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
-            ],
-            [
-                "name" => "Ancient Greaves",
-                "image" => "$prefix/BotW_Ancient_Greaves_Icon.png",
-                "upgradable" => 1,
-                "armor_set_id" => $ancientSet,
-            ],
-            [
                 "name" => "Sand Boots",
                 "image" => "$prefix/BotW_Sand_Boots_Icon.png",
                 "upgradable" => 1,
@@ -379,30 +373,6 @@ class ArmorSeeder extends Seeder
                 "name" => "Snow Boots",
                 "image" => "$prefix/BotW_Snow_Boots_Icon.png",
                 "upgradable" => 1,
-                "armor_set_id" => null,
-            ],
-            [
-                "name" => "Bokoblin Mask",
-                "image" => "$prefix/BotW_Bokoblin_Mask_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => null,
-            ],
-            [
-                "name" => "Moblin Mask",
-                "image" => "$prefix/BotW_Moblin_Mask_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => null,
-            ],
-            [
-                "name" => "Lizalfos Mask",
-                "image" => "$prefix/BotW_Lizalfos_Mask_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => null,
-            ],
-            [
-                "name" => "Lynel Mask",
-                "image" => "$prefix/BotW_Lynel_Mask_Icon.png",
-                "upgradable" => 0,
                 "armor_set_id" => null,
             ],
             [
@@ -612,38 +582,20 @@ class ArmorSeeder extends Seeder
             [
                 "name" => "Royal Guard Cap",
                 "image" => "$prefix/BotW_Royal_Guard_Cap_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
             ],
             [
                 "name" => "Royal Guard Uniform",
                 "image" => "$prefix/BotW_Royal_Guard_Uniform_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
             ],
             [
                 "name" => "Royal Guard Boots",
                 "image" => "$prefix/BotW_Royal_Guard_Boots_Icon.png",
-                "upgradable" => 0,
+                "upgradable" => 1,
                 "armor_set_id" => $royalGuardSet,
-            ],
-            [
-                "name" => "Phantom Ganon Skull",
-                "image" => "$prefix/BotW_Phantom_Ganon_Skull_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $phantomGanonSet,
-            ],
-            [
-                "name" => "Phantom Ganon Armor",
-                "image" => "$prefix/BotW_Phantom_Ganon_Armor_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $phantomGanonSet,
-            ],
-            [
-                "name" => "Phantom Ganon Greaves",
-                "image" => "$prefix/BotW_Phantom_Ganon_Greaves_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $phantomGanonSet,
             ],
             [
                 "name" => "Vah Ruta Divine Helm",
@@ -712,24 +664,6 @@ class ArmorSeeder extends Seeder
                 "armor_set_id" => null,
             ],
             [
-                "name" => "Archaic Tunic",
-                "image" => "$prefix/TotK_Archaic_Tunic_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $archaicSet,
-            ],
-            [
-                "name" => "Archaic Legwear",
-                "image" => "$prefix/TotK_Archaic_Legwear_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $archaicSet,
-            ],
-            [
-                "name" => "Archaic Warm Greaves",
-                "image" => "$prefix/TotK_Archaic_Warm_Greaves_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => $archaicSet,
-            ],
-            [
                 "name" => "Froggy Hood",
                 "image" => "$prefix/TotK_Froggy_Hood_Icon.png",
                 "upgradable" => 1,
@@ -746,6 +680,240 @@ class ArmorSeeder extends Seeder
                 "image" => "$prefix/TotK_Froggy_Leggings_Icon.png",
                 "upgradable" => 1,
                 "armor_set_id" => $froggySet,
+            ],
+            [
+                "name" => "Miner's Mask",
+                "image" => "$prefix/TotK_Miner's_Mask_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $minersSet,
+            ],
+            [
+                "name" => "Miner's Top",
+                "image" => "$prefix/TotK_Miner's_Top_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $minersSet,
+            ],
+            [
+                "name" => "Miner's Trousers",
+                "image" => "$prefix/TotK_Miner's_Trousers_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $minersSet,
+            ],
+            [
+                "name" => "Ember Headdress",
+                "image" => "$prefix/TotK_Ember_Headdress_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $emberSet,
+            ],
+            [
+                "name" => "Ember Shirt",
+                "image" => "$prefix/TotK_Ember_Shirt_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $emberSet,
+            ],
+            [
+                "name" => "Ember Trousers",
+                "image" => "$prefix/TotK_Ember_Trousers_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $emberSet,
+            ],
+            [
+                "name" => "Charged Headdress",
+                "image" => "$prefix/TotK_Charged_Headdress_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $chargedSet,
+            ],
+            [
+                "name" => "Charged Shirt",
+                "image" => "$prefix/TotK_Charged_Shirt_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $chargedSet,
+            ],
+            [
+                "name" => "Charged Trousers",
+                "image" => "$prefix/TotK_Charged_Trousers_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $chargedSet,
+            ],
+            [
+                "name" => "Frostbite Headdress",
+                "image" => "$prefix/TotK_Frostbite_Headdress_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
+            ],
+            [
+                "name" => "Frostbite Shirt",
+                "image" => "$prefix/TotK_Frostbite_Shirt_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
+            ],
+            [
+                "name" => "Frostbite Trousers",
+                "image" => "$prefix/TotK_Frostbite_Trousers_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $frostbiteSet,
+            ],
+            [
+                "name" => "Cece Hat",
+                "image" => "$prefix/TotK_Cece_Hat_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Mystic Headpiece",
+                "image" => "$prefix/TotK_Mystic_Headpiece_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $mysticSet,
+            ],
+            [
+                "name" => "Mystic Robe",
+                "image" => "$prefix/TotK_Mystic_Robe_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $mysticSet,
+            ],
+            [
+                "name" => "Mystic Trousers",
+                "image" => "$prefix/TotK_Mystic_Trousers_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $mysticSet,
+            ],
+            [
+                "name" => "Zonaite Helm",
+                "image" => "$prefix/TotK_Zonaite_Helm_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Zonaite Waistguard",
+                "image" => "$prefix/TotK_Zonaite_Waistguard_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Zonaite Shin Guards",
+                "image" => "$prefix/TotK_Zonaite_Shin_Guards_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $zonaiteSet,
+            ],
+            [
+                "name" => "Mask of Awakening",
+                "image" => "$prefix/TotK_Mask_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
+            ],
+            [
+                "name" => "Tunic of Awakening",
+                "image" => "$prefix/TotK_Tunic_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
+            ],
+            [
+                "name" => "Trousers of Awakening",
+                "image" => "$prefix/TotK_Trousers_of_Awakening_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $awakeningSet,
+            ],
+            [
+                "name" => "Bokoblin Mask",
+                "image" => "$prefix/BotW_Bokoblin_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Moblin Mask",
+                "image" => "$prefix/BotW_Moblin_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Lizalfos Mask",
+                "image" => "$prefix/BotW_Lizalfos_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Lynel Mask",
+                "image" => "$prefix/BotW_Lynel_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Horriblin Mask",
+                "image" => "$prefix/TotK_Horriblin_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Hood of the Depths",
+                "image" => "$prefix/TotK_Hood_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
+            ],
+            [
+                "name" => "Tunic of the Depths",
+                "image" => "$prefix/TotK_Tunic_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
+            ],
+            [
+                "name" => "Gaiters of the Depths",
+                "image" => "$prefix/TotK_Gaiters_of_the_Depths_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $depthsSet,
+            ],
+            [
+                "name" => "Well-Worn Hair Band",
+                "image" => "$prefix/TotK_Well-Worn_Hair_Band_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Lightning Helm",
+                "image" => "$prefix/TotK_Lightning_Helm_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Tunic of Memories",
+                "image" => "$prefix/TotK_Tunic_of_Memories_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => null,
+            ],
+            [
+                "name" => "Yiga Mask",
+                "image" => "$prefix/TotK_Yiga_Mask_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Yiga Armor",
+                "image" => "$prefix/TotK_Yiga_Armor_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Yiga Tights",
+                "image" => "$prefix/TotK_Yiga_Tights_Icon.png",
+                "upgradable" => 1,
+                "armor_set_id" => $yigaSet,
+            ],
+            [
+                "name" => "Evil Spirit Mask",
+                "image" => "$prefix/TotK_Evil_Spirit_Mask_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
+            ],
+            [
+                "name" => "Evil Spirit Armor",
+                "image" => "$prefix/TotK_Evil_Spirit_Armor_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
+            ],
+            [
+                "name" => "Evil Spirit Greaves",
+                "image" => "$prefix/TotK_Evil_Spirit_Greaves_Icon.png",
+                "upgradable" => 0,
+                "armor_set_id" => $evilSpiritSet,
             ],
         ];
 

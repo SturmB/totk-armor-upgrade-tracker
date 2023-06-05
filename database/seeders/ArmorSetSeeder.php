@@ -19,8 +19,8 @@ class ArmorSetSeeder extends Seeder
 
         $armorSets = [
             [
-                "name" => "Well-Worn Outfit",
-                "image" => "$prefix/BotW_Link_Wearing_Well-Worn_Outfit.jpg",
+                "name" => "Archaic Set",
+                "image" => null,
             ],
             [
                 "name" => "Hylian Set",
@@ -43,12 +43,12 @@ class ArmorSetSeeder extends Seeder
                 "image" => "$prefix/BotW_Link_Wearing_Gerudo_Set.jpg",
             ],
             [
-                "name" => "Rubber Set",
-                "image" => "$prefix/BotW_Link_Wearing_Rubber_Armor.jpg",
-            ],
-            [
                 "name" => "Flamebreaker Set",
                 "image" => "$prefix/BotW_Link_Wearing_Flamebreaker_Set.jpg",
+            ],
+            [
+                "name" => "Rubber Set",
+                "image" => "$prefix/BotW_Link_Wearing_Rubber_Armor.jpg",
             ],
             [
                 "name" => "Zora Set",
@@ -73,10 +73,6 @@ class ArmorSetSeeder extends Seeder
             [
                 "name" => "Radiant Set",
                 "image" => "$prefix/BotW_Link_Wearing_Radiant_Set.jpg",
-            ],
-            [
-                "name" => "Ancient Set",
-                "image" => "$prefix/BotW_Link_Wearing_Ancient_Set.jpg",
             ],
             [
                 "name" => "Dark Set",
@@ -119,10 +115,6 @@ class ArmorSetSeeder extends Seeder
                 "image" => "$prefix/BotW_Royal_Guard_Set_Concept_Artwork.png",
             ],
             [
-                "name" => "Phantom Ganon Set",
-                "image" => null,
-            ],
-            [
                 "name" => "Salvager's Set",
                 "image" => null,
             ],
@@ -131,11 +123,47 @@ class ArmorSetSeeder extends Seeder
                 "image" => null,
             ],
             [
-                "name" => "Archaic Set",
+                "name" => "Froggy Set",
                 "image" => null,
             ],
             [
-                "name" => "Froggy Set",
+                "name" => "Miner's Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Ember Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Charged Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Frostbite Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Mystic Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Zonaite Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Awakening Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Depths Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Yiga Set",
+                "image" => null,
+            ],
+            [
+                "name" => "Evil Spirit Set",
                 "image" => null,
             ],
         ];
