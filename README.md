@@ -23,8 +23,8 @@ There are several things that I need to address after launching this app.
 - [ ] Change color scheme for TotK.
 - [ ] Update logo and branding for TotK.
 - [x] Update existing armor requirements for TotK.
-- [ ] Organize the armors by set (as much as I can).
-- [ ] Organize the resources by type (as much as I can).
+- [x] Organize the armors by set (as much as I can).
+- [x] Organize the resources by type (as much as I can).
 - [ ] Make image sizes consistent.
 - [ ] Fix caching to address Redis value size limitation.
 - [ ] Add new armor set images.
