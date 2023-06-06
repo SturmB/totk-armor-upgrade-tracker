@@ -280,12 +280,6 @@ class ArmorSeeder extends Seeder
                 "armor_set_id" => null,
             ],
             [
-                "name" => "Thunder Helm",
-                "image" => "$prefix/BotW_Thunder_Helm_Icon.png",
-                "upgradable" => 0,
-                "armor_set_id" => null,
-            ],
-            [
                 "name" => "Climber's Bandanna",
                 "image" => "$prefix/BotW_Climber's_Bandanna_Icon.png",
                 "upgradable" => 1,
