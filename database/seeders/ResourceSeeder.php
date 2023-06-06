@@ -232,7 +232,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Diamond",
-                "image" => "$prefix/BotW_Diamond_Icon.png",
+                "image" => "$prefix/TotK_Diamond_Icon.png",
             ],
             [
                 "name" => "Ruby",
@@ -252,7 +252,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Amber",
-                "image" => "$prefix/BotW_Amber_Icon.png",
+                "image" => "$prefix/TotK_Amber_Icon.png",
             ],
             [
                 "name" => "Luminous Stone",
