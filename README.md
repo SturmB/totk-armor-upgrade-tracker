@@ -25,8 +25,10 @@ There are several things that I need to address after launching this app.
 - [x] Update existing armor requirements for TotK.
 - [x] Organize the armors by set (as much as I can).
 - [x] Organize the resources by type (as much as I can).
-- [ ] Make image sizes consistent.
-- [ ] Fix caching to address Redis value size limitation.
+- [x] Make image sizes consistent.
+- [ ] Find better TotK images.
+- [ ] Fix caching to address Redis value size limitation. (This may not actually be the root of the problem. Still looking into it.)
 - [ ] Add new armor set images.
+- [ ] Add a sticky Feedback button/component.
 - [ ] Add a tri-state checkbox for each armor set to select/deselect all armors in that set.
 - [ ] Replace the apparently abandoned [Livewire Range Slider](https://github.com/jantinnerezo/livewire-range-slider) with a pure-JavaScript usage of the [noUiSlider](https://refreshless.com/nouislider/).
