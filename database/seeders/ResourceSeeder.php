@@ -24,7 +24,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Mighty Bananas",
-                "image" => "$prefix/TotK_Mighty_Bananas_Icon.png",
+                "image" => "$prefix/BotW_Mighty_Bananas_Icon.png",
             ],
             [
                 "name" => "Fire Fruit",
@@ -56,7 +56,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Chillshroom",
-                "image" => "$prefix/TotK_Chillshroom_Icon.png",
+                "image" => "$prefix/BotW_Chillshroom_Icon.png",
             ],
             [
                 "name" => "Sunshroom",
@@ -72,7 +72,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Razorshroom",
-                "image" => "$prefix/TotK_Razorshroom_Icon.png",
+                "image" => "$prefix/BotW_Razorshroom_Icon.png",
             ],
             [
                 "name" => "Swift Carrot",
@@ -84,7 +84,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Cool Safflina",
-                "image" => "$prefix/TotK_Cool_Safflina_Icon.png",
+                "image" => "$prefix/BotW_Cool_Safflina_Icon.png",
             ],
             [
                 "name" => "Warm Safflina",
@@ -92,11 +92,11 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Electric Safflina",
-                "image" => "$prefix/TotK_Electric_Safflina_Icon.png",
+                "image" => "$prefix/BotW_Electric_Safflina_Icon.png",
             ],
             [
                 "name" => "Mighty Thistle",
-                "image" => "$prefix/TotK_Mighty_Thistle_Icon.png",
+                "image" => "$prefix/BotW_Mighty_Thistle_Icon.png",
             ],
             [
                 "name" => "Swift Violet",
@@ -140,15 +140,15 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Chillfin Trout",
-                "image" => "$prefix/TotK_Chillfin_Trout_Icon.png",
+                "image" => "$prefix/BotW_Chillfin_Trout_Icon.png",
             ],
             [
                 "name" => "Sizzlefin Trout",
-                "image" => "$prefix/TotK_Sizzlefin_Trout_Icon.png",
+                "image" => "$prefix/BotW_Sizzlefin_Trout_Icon.png",
             ],
             [
                 "name" => "Voltfin Trout",
-                "image" => "$prefix/TotK_Voltfin_Trout_Icon.png",
+                "image" => "$prefix/BotW_Voltfin_Trout_Icon.png",
             ],
             [
                 "name" => "Glowing Cave Fish",
@@ -156,7 +156,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Razorclaw Crab",
-                "image" => "$prefix/TotK_Razorclaw_Crab_Icon.png",
+                "image" => "$prefix/BotW_Razorclaw_Crab_Icon.png",
             ],
             [
                 "name" => "Sneaky River Snail",
@@ -164,15 +164,15 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Winterwing Butterfly",
-                "image" => "$prefix/TotK_Winterwing_Butterfly_Icon.png",
+                "image" => "$prefix/BotW_Winterwing_Butterfly_Icon.png",
             ],
             [
                 "name" => "Summerwing Butterfly",
-                "image" => "$prefix/TotK_Summerwing_Butterfly_Icon.png",
+                "image" => "$prefix/BotW_Summerwing_Butterfly_Icon.png",
             ],
             [
                 "name" => "Thunderwing Butterfly",
-                "image" => "$prefix/TotK_Thunderwing_Butterfly_Icon.png",
+                "image" => "$prefix/BotW_Thunderwing_Butterfly_Icon.png",
             ],
             [
                 "name" => "Smotherwing Butterfly",
@@ -180,19 +180,19 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Cold Darner",
-                "image" => "$prefix/TotK_Cold_Darner_Icon.png",
+                "image" => "$prefix/BotW_Cold_Darner_Icon.png",
             ],
             [
                 "name" => "Warm Darner",
-                "image" => "$prefix/TotK_Warm_Darner_Icon.png",
+                "image" => "$prefix/BotW_Warm_Darner_Icon.png",
             ],
             [
                 "name" => "Electric Darner",
-                "image" => "$prefix/TotK_Electric_Darner_Icon.png",
+                "image" => "$prefix/BotW_Electric_Darner_Icon.png",
             ],
             [
                 "name" => "Bladed Rhino Beetle",
-                "image" => "$prefix/TotK_Bladed_Rhino_Beetle_Icon.png",
+                "image" => "$prefix/BotW_Bladed_Rhino_Beetle_Icon.png",
             ],
             [
                 "name" => "Energetic Rhino Beetle",
@@ -220,7 +220,7 @@ class ResourceSeeder extends Seeder
             ],
             [
                 "name" => "Hearty Lizard",
-                "image" => "$prefix/TotK_Hearty_Lizard_Icon.png",
+                "image" => "$prefix/BotW_Hearty_Lizard_Icon.png",
             ],
             [
                 "name" => "Fireproof Lizard",
