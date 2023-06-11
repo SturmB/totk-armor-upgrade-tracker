@@ -1,7 +1,7 @@
 <div class="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 pt-5">
     <a href="{{ route('home') }}" class="flex flex-col flex-shrink-0 items-center justify-center px-4">
         <img
-            src="{{ asset('storage/images/icons/BotW-02.png') }}"
+            src="{{ asset('storage/images/icons/TotK-02.png') }}"
             alt="The Legend of Zelda: Breath of the Wild"
             class="w-3/4"
         >
