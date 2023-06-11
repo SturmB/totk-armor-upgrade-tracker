@@ -77,6 +77,10 @@ module.exports = {
                     900: '#1b1009',
                     950: '#0d0804',
                 },
+                'totk-sand': '#e5d493',
+                'totk-beige': '#faf7dc',
+                'totk-soil': '#a29d6d',
+                'totk-gray': '#545563',
                 'totk-green': {
                     50: '#ecfaf5',
                     100: '#daf6eb',
