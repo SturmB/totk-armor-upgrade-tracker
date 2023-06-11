@@ -1,7 +1,7 @@
 <div class="pb-12">
     <div wire:loading.delay class="fixed inset-0 z-10 md:start-64 top-16 bg-gray-100/75 dark:bg-gray-800/90">
         <button
-            class="block relative items-center mx-auto px-4 py-2 top-1/2 translate-y-[-50%] bg-botw-blue-500 dark:bg-botw-blue-400 border border-transparent rounded-md font-semibold text-xs text-white dark:text-botw-blue-900 uppercase tracking-widest transition"
+            class="block relative items-center mx-auto px-4 py-2 top-1/2 translate-y-[-50%] bg-totk-green-500 dark:bg-totk-green-400 border border-transparent rounded-md font-semibold text-xs text-white dark:text-totk-green-900 uppercase tracking-widest transition"
             disabled
         >
             <i class="fa-duotone fa-loader fa-spin-pulse mr-2"></i>
@@ -27,9 +27,9 @@
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ __("Armor Sets") }}</h2>
             <div class="font-semibold text-xl">
                 <a wire:click="setAllActive(true)"
-                   class="text-botw-blue-500 dark:text-botw-blue-400 hover:text-botw-blue-600 dark:hover:text-botw-blue-300 hover:cursor-pointer hover:underline">{{ __("Select All") }}</a>
+                   class="text-totk-green-500 dark:text-totk-green-400 hover:text-totk-green-600 dark:hover:text-totk-green-300 hover:cursor-pointer hover:underline">{{ __("Select All") }}</a>
                 / <a wire:click="setAllActive(false)"
-                     class="text-botw-blue-500 dark:text-botw-blue-400 hover:text-botw-blue-600 dark:hover:text-botw-blue-300 hover:cursor-pointer hover:underline">{{ __("Deselect All") }}</a>
+                     class="text-totk-green-500 dark:text-totk-green-400 hover:text-totk-green-600 dark:hover:text-totk-green-300 hover:cursor-pointer hover:underline">{{ __("Deselect All") }}</a>
             </div>
         </div>
         @foreach($armorSets as $armorSet)

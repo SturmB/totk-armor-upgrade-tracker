@@ -5,7 +5,7 @@
             alt="The Legend of Zelda: Breath of the Wild"
             class="w-3/4"
         >
-        <h3 class="text-2xl font-bold text-center text-botw-green-600 dark:text-botw-green-400 font-title leading-6">
+        <h3 class="text-2xl font-bold text-center text-totk-purple-600 dark:text-totk-purple-400 font-title leading-6">
             {{ __("Armor Upgrade Tracker") }}
         </h3>
     </a>

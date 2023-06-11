@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
-                    <button type="button" class="text-sm text-botw-blue-500 dark:text-botw-blue-400 hover:text-botw-blue-600 dark:hover:text-botw-blue-300 underline cursor-pointer"
+                    <button type="button" class="text-sm text-totk-green-500 dark:text-totk-green-400 hover:text-totk-green-600 dark:hover:text-totk-green-300 underline cursor-pointer"
                                     x-show="! recovery"
                                     x-on:click="
                                         recovery = true;
@@ -38,7 +38,7 @@
                         {{ __('Use a recovery code') }}
                     </button>
 
-                    <button type="button" class="text-sm text-botw-blue-500 dark:text-botw-blue-400 hover:text-botw-blue-600 dark:hover:text-botw-blue-300 underline cursor-pointer"
+                    <button type="button" class="text-sm text-totk-green-500 dark:text-totk-green-400 hover:text-totk-green-600 dark:hover:text-totk-green-300 underline cursor-pointer"
                                     x-show="recovery"
                                     x-on:click="
                                         recovery = false;

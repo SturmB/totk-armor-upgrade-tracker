@@ -30,7 +30,7 @@
         <button
             type="button"
             id="theme-toggle"
-            class="absolute top-0 end-0 rounded-full bg-gray-100 dark:bg-gray-800 m-4 p-1 h-10 w-10 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-botw-blue-400 dark:focus:ring-botw-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            class="absolute top-0 end-0 rounded-full bg-gray-100 dark:bg-gray-800 m-4 p-1 h-10 w-10 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-totk-green-400 dark:focus:ring-totk-green-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
         >
             <span class="sr-only">Toggle dark mode</span>
             <div id="theme-toggle-dark-icon" class="hidden">
