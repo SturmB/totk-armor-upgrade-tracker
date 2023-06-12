@@ -20,8 +20,8 @@ There are several things that I need to address after launching this app.
 
 - [x] Add new armors and resources (as many as possible before launch).
 - [ ] Make the sliders accept variable min & max tiers.
-- [ ] Change color scheme for TotK.
-- [ ] Update logo and branding for TotK.
+- [x] Change color scheme for TotK.
+- [x] Update logo and branding for TotK.
 - [x] Update existing armor requirements for TotK.
 - [x] Organize the armors by set (as much as I can).
 - [x] Organize the resources by type (as much as I can).
