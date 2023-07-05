@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Resource extends Model
+class TotkResource extends Model
 {
     use HasFactory;
 
@@ -28,8 +28,8 @@ class Resource extends Model
      */
     public function armors(): BelongsToMany
     {
-        return $this->belongsToMany(Armor::class)
-            ->using(Requirement::class)
+        return $this->belongsToMany(TotkArmor::class, "totk_armor_resource")
+            ->using(TotkRequirement::class)
             ->withPivot("id", "tier", "quantity_needed")
             ->withTimestamps();
     }
@@ -51,6 +51,6 @@ class Resource extends Model
      */
     public function requirements(): HasMany
     {
-        return $this->hasMany(Requirement::class);
+        return $this->hasMany(TotkRequirement::class, "totk_resource_id");
     }
 }

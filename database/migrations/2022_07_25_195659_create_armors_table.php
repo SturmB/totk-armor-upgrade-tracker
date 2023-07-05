@@ -12,18 +12,18 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create("armors", function (Blueprint $table) {
+        Schema::create("totk_armors", function (Blueprint $table) {
             $table->smallIncrements("id");
             $table->string("name", 100)->unique();
             $table->string("image", 100)->nullable();
             $table->boolean("upgradable")->default(1);
-            $table->unsignedSmallInteger("armor_set_id")->nullable();
+            $table->unsignedSmallInteger("totk_armor_set_id")->nullable();
             $table->timestamps();
 
             $table
-                ->foreign("armor_set_id")
+                ->foreign("totk_armor_set_id")
                 ->references("id")
-                ->on("armor_sets")
+                ->on("totk_armor_sets")
                 ->cascadeOnUpdate()
                 ->nullOnDelete()
                 ->nullable();
@@ -37,6 +37,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("armors");
+        Schema::dropIfExists("totk_armors");
     }
 };

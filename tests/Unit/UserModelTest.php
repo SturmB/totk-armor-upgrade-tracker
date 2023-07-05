@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Models\Armor;
-use App\Models\Resource;
+use App\Models\TotkArmor;
+use App\Models\TotkResource;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -32,7 +32,7 @@ class UserModelTest extends TestCase
     public function test_user_is_connected_to_armors_with_pivot(): void
     {
         $user = User::factory()
-            ->has(Armor::factory()->count(3))
+            ->has(TotkArmor::factory()->count(3))
             ->create();
 
         $this->assertModelExists($user->armors->first());
@@ -50,7 +50,7 @@ class UserModelTest extends TestCase
     public function test_user_is_connected_to_resources_with_pivot(): void
     {
         $user = User::factory()
-            ->has(Resource::factory()->count(3))
+            ->has(TotkResource::factory()->count(3))
             ->create();
 
         $this->assertModelExists($user->resources->first());

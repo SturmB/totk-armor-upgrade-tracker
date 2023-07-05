@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Armor;
+use App\Models\TotkArmor;
 use App\Services\TrackingService;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
@@ -25,7 +25,7 @@ class ArmorCard extends Component
             "values" => [1, 2, 3, 4],
         ],
     ];
-    public Armor $armor;
+    public TotkArmor $armor;
     public array $range;
     public bool $isActive;
     public array|null $trackingData = null;

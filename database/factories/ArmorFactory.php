@@ -2,16 +2,16 @@
 
 namespace Database\Factories;
 
-use App\Models\Armor;
-use App\Models\ArmorSet;
+use App\Models\TotkArmor;
+use App\Models\TotkArmorSet;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Armor>
+ * @extends Factory<TotkArmor>
  */
 class ArmorFactory extends Factory
 {
-    protected $model = Armor::class;
+    protected $model = TotkArmor::class;
     /**
      * Define the model's default state.
      *
@@ -23,7 +23,7 @@ class ArmorFactory extends Factory
             "name" => fake()->name(),
             "image" => fake()->filePath(),
             "upgradable" => fake()->boolean(),
-            "armor_set_id" => fn() => ArmorSet::factory()->create(),
+            "armor_set_id" => fn() => TotkArmorSet::factory()->create(),
         ];
     }
 }

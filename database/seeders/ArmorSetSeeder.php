@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\ArmorSet;
+use App\Models\TotkArmorSet;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -168,6 +168,6 @@ class ArmorSetSeeder extends Seeder
             ],
         ];
 
-        ArmorSet::upsert($armorSets, ['name'], ['image']);
+        TotkArmorSet::upsert($armorSets, ['name'], ['image']);
     }
 }

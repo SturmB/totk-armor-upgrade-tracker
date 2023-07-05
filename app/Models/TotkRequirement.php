@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Requirement extends Pivot
+class TotkRequirement extends Pivot
 {
     use HasFactory;
 
@@ -15,11 +15,11 @@ class Requirement extends Pivot
      *
      * @var string
      */
-    protected $table = 'armor_resource';
+    protected $table = 'totk_armor_resource';
 
     protected $fillable = [
-        "armor_id",
-        "resource_id",
+        "totk_armor_id",
+        "totk_resource_id",
         "tier",
         "quantity_needed",
         "created_at",
@@ -40,7 +40,7 @@ class Requirement extends Pivot
      */
     public function armor(): BelongsTo
     {
-        return $this->belongsTo(Armor::class);
+        return $this->belongsTo(TotkArmor::class, "totk_armor_id");
     }
 
     /**
@@ -50,6 +50,6 @@ class Requirement extends Pivot
      */
     public function resource(): BelongsTo
     {
-        return $this->belongsTo(Resource::class);
+        return $this->belongsTo(TotkResource::class, "totk_resource_id");
     }
 }

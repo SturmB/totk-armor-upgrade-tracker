@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Armor extends Model
+class TotkArmor extends Model
 {
     use HasFactory;
 
@@ -23,7 +23,7 @@ class Armor extends Model
      * @var array
      */
     protected $fillable = [
-        "armor_set_id",
+        "totk_armor_set_id",
         "name",
         "image",
         "upgradable",
@@ -36,8 +36,8 @@ class Armor extends Model
      */
     public function resources(): BelongsToMany
     {
-        return $this->belongsToMany(Resource::class)
-            ->using(Requirement::class)
+        return $this->belongsToMany(TotkResource::class, "totk_armor_resource")
+            ->using(TotkRequirement::class)
             ->withPivot("id", "tier", "quantity_needed")
             ->withTimestamps();
     }
@@ -48,7 +48,7 @@ class Armor extends Model
     public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class)
-            ->using(Track::class)
+            ->using(TotkTrack::class)
             ->withPivot("tracking", "tracking_tier_start", "tracking_tier_end")
             ->withTimestamps();
     }
@@ -58,7 +58,7 @@ class Armor extends Model
      */
     public function armorSet(): BelongsTo
     {
-        return $this->belongsTo(ArmorSet::class);
+        return $this->belongsTo(TotkArmorSet::class, "totk_armor_set_id");
     }
 
     /**
@@ -68,6 +68,6 @@ class Armor extends Model
      */
     public function requirements(): HasMany
     {
-        return $this->hasMany(Requirement::class);
+        return $this->hasMany(TotkRequirement::class, "totk_armor_id");
     }
 }

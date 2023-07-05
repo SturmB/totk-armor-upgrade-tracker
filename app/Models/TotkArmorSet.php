@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class ArmorSet extends Model
+class TotkArmorSet extends Model
 {
     use HasFactory;
 
@@ -27,6 +27,6 @@ class ArmorSet extends Model
      */
     public function armors(): HasMany
     {
-        return $this->hasMany(Armor::class);
+        return $this->hasMany(TotkArmor::class, "totk_armor_set_id");
     }
 }

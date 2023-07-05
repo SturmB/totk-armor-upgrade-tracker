@@ -12,23 +12,23 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create("armor_user", function (Blueprint $table) {
+        Schema::create("totk_armor_user", function (Blueprint $table) {
             $table->id();
             $table
                 ->foreignId("user_id")
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->unsignedSmallInteger("armor_id");
+            $table->unsignedSmallInteger("totk_armor_id");
             $table->boolean('tracking')->default(true);
             $table->unsignedTinyInteger("tracking_tier_start")->default(1);
             $table->unsignedTinyInteger("tracking_tier_end")->default(4);
             $table->timestamps();
 
             $table
-                ->foreign("armor_id")
+                ->foreign("totk_armor_id")
                 ->references("id")
-                ->on("armors")
+                ->on("totk_armors")
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
         });
@@ -41,6 +41,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("armor_user");
+        Schema::dropIfExists("totk_armor_user");
     }
 };

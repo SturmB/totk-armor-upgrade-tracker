@@ -10,23 +10,23 @@ return new class () extends Migration {
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create("resource_user", function (Blueprint $table) {
+        Schema::create("totk_resource_user", function (Blueprint $table) {
             $table->id();
             $table
                 ->foreignId("user_id")
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->unsignedSmallInteger("resource_id");
+            $table->unsignedSmallInteger("totk_resource_id");
             $table->unsignedSmallInteger("quantity_owned")->default(0);
             $table->timestamps();
 
             $table
-                ->foreign("resource_id")
+                ->foreign("totk_resource_id")
                 ->references("id")
-                ->on("resources")
+                ->on("totk_resources")
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
         });
@@ -37,8 +37,8 @@ return new class () extends Migration {
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists("resource_user");
+        Schema::dropIfExists("totk_resource_user");
     }
 };

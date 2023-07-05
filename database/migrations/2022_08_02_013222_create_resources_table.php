@@ -12,7 +12,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create("resources", function (Blueprint $table) {
+        Schema::create("totk_resources", function (Blueprint $table) {
             $table->smallIncrements("id");
             $table->string("name", 100)->unique();
             $table->string("image", 100)->nullable();
@@ -27,6 +27,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("resources");
+        Schema::dropIfExists("totk_resources");
     }
 };

@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Resource;
+use App\Models\TotkResource;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -684,6 +684,6 @@ class ResourceSeeder extends Seeder
             ],
         ];
 
-        Resource::upsert($resources, ['name'], ['image']);
+        TotkResource::upsert($resources, ['name'], ['image']);
     }
 }

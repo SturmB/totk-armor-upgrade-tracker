@@ -12,24 +12,24 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create("armor_resource", function (Blueprint $table) {
+        Schema::create("totk_armor_resource", function (Blueprint $table) {
             $table->id();
-            $table->unsignedSmallInteger("armor_id");
-            $table->unsignedSmallInteger("resource_id");
+            $table->unsignedSmallInteger("totk_armor_id");
+            $table->unsignedSmallInteger("totk_resource_id");
             $table->unsignedTinyInteger("tier");
             $table->unsignedSmallInteger("quantity_needed");
             $table->timestamps();
 
             $table
-                ->foreign("armor_id")
+                ->foreign("totk_armor_id")
                 ->references("id")
-                ->on("armors")
+                ->on("totk_armors")
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
             $table
-                ->foreign("resource_id")
+                ->foreign("totk_resource_id")
                 ->references("id")
-                ->on("resources")
+                ->on("totk_resources")
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
         });
@@ -42,6 +42,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists("armor_resource");
+        Schema::dropIfExists("totk_armor_resource");
     }
 };

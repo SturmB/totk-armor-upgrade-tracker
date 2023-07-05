@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Armor;
-use App\Models\ArmorSet;
+use App\Models\TotkArmor;
+use App\Models\TotkArmorSet;
 use App\Services\TrackingService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
@@ -23,21 +23,21 @@ class Main extends Component
     public function mount(TrackingService $service): void
     {
         $this->armorSets = Cache::rememberForever(
-            "armor-sets:all",
-            fn () => ArmorSet::with([
+            "totk_armor-sets:all",
+            fn () => TotkArmorSet::with([
                 "armors.resources" => function ($query) {
                     $query->orderBy("tier", "asc");
                 },
             ])->get()
         );
         $this->uncategorizedArmors = Cache::rememberForever(
-            "armors:uncategorized",
-            fn () => Armor::with([
+            "totk_armors:uncategorized",
+            fn () => TotkArmor::with([
                 "resources" => function ($query) {
                     $query->orderBy("tier", "asc");
                 },
             ])
-                ->whereNull("armor_set_id")
+                ->whereNull("totk_armor_set_id")
                 ->get()
         );
         $this->filteredArmors = collect();
@@ -54,9 +54,9 @@ class Main extends Component
         $this->searchTerm = $searchTerm;
         if ($searchTerm) {
             $this->filteredArmors = Cache::remember(
-                "armors:searches:$searchTerm",
+                "totk_armors:searches:$searchTerm",
                 30 * 24 * 60 * 60,
-                fn () => Armor::where("name", "like", "%$searchTerm%")
+                fn () => TotkArmor::where("name", "like", "%$searchTerm%")
                     ->with([
                         "resources" => function ($query) {
                             $query->orderBy("tier", "asc");

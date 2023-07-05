@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Models\Armor;
-use App\Models\Requirement;
-use App\Models\Resource;
+use App\Models\TotkArmor;
+use App\Models\TotkRequirement;
+use App\Models\TotkResource;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -19,7 +19,7 @@ class RequirementModelTest extends TestCase
      */
     public function test_saves_requirement_model_to_database(): void
     {
-        $requirement = Requirement::factory()->create();
+        $requirement = TotkRequirement::factory()->create();
 
         $this->assertModelExists($requirement);
     }
@@ -31,8 +31,8 @@ class RequirementModelTest extends TestCase
      */
     public function test_requirement_is_connected_to_armor(): void
     {
-        $requirement = Requirement::factory()
-            ->for(Armor::factory()->create())
+        $requirement = TotkRequirement::factory()
+            ->for(TotkArmor::factory()->create())
             ->create();
 
         $this->assertModelExists($requirement->armor);
@@ -45,8 +45,8 @@ class RequirementModelTest extends TestCase
      */
     public function test_requirement_is_connected_to_resource(): void
     {
-        $requirement = Requirement::factory()
-            ->for(Resource::factory()->create())
+        $requirement = TotkRequirement::factory()
+            ->for(TotkResource::factory()->create())
             ->create();
 
         $this->assertModelExists($requirement->resource);

@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Models\Requirement;
-use App\Models\Track;
+use App\Models\TotkRequirement;
+use App\Models\TotkTrack;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 
@@ -12,21 +12,21 @@ class TrackingService
     public function getTrackingForArmor(int $armorId): array
     {
         $defaultValues = [
-            "armor_id" => $armorId,
+            "totk_armor_id" => $armorId,
             "tracking_tier_start" => 1,
             "tracking_tier_end" => 4,
             "tracking" => true,
         ];
 
         if (auth()->check()) {
-            $track = Track::where([
+            $track = TotkTrack::where([
                 "user_id" => auth()->id(),
-                "armor_id" => $armorId,
+                "totk_armor_id" => $armorId,
             ])->first();
             return $track?->toArray() ?: $defaultValues;
         }
 
-        return session("armors.$armorId", $defaultValues);
+        return session("totk_armors.$armorId", $defaultValues);
     }
 
     public function getAllTracking(): array
@@ -34,9 +34,9 @@ class TrackingService
         if (auth()->check()) {
             $userId = auth()->id();
             $trackingForUser = Cache::remember(
-                "tracking:user-$userId",
+                "totk_tracking:user-$userId",
                 24 * 60 * 60,
-                fn () => Track::where([
+                fn () => TotkTrack::where([
                     "user_id" => $userId,
                 ])->get()
             );
@@ -44,13 +44,13 @@ class TrackingService
             return $trackingForUser?->count() > 0
                 ? $trackingForUser->mapWithKeys(function ($track) {
                     return [
-                        $track->armor_id => $track,
+                        $track->totk_armor_id => $track,
                     ];
                 })->toArray()
                 : $this->formattedDefaults()->toArray();
         }
 
-        return session("armors", $this->formattedDefaults()->toArray());
+        return session("totk_armors", $this->formattedDefaults()->toArray());
     }
 
     /**
@@ -59,8 +59,8 @@ class TrackingService
      */
     public function populateTrackingDbIfEmpty(int $userId): void
     {
-        if (Track::where("user_id", $userId)->count() === 0) {
-            if (session()->has("armors")) {
+        if (TotkTrack::where("user_id", $userId)->count() === 0) {
+            if (session()->has("totk_armors")) {
                 $this->copyTrackingData($userId);
             } else {
                 // This should never even fire, because even if this is your first time logging in,
@@ -75,8 +75,8 @@ class TrackingService
      */
     public function populateTrackingSessionIfEmpty(): void
     {
-        if (session()->missing("armors")) {
-            session(["armors" => $this->formattedDefaults()->toArray()]);
+        if (session()->missing("totk_armors")) {
+            session(["totk_armors" => $this->formattedDefaults()->toArray()]);
         }
     }
 
@@ -84,29 +84,29 @@ class TrackingService
     {
         if (auth()->check()) {
             $userId = auth()->id();
-            Track::updateOrCreate(
-                ["user_id" => $userId, "armor_id" => $newTracking["armor_id"]],
+            TotkTrack::updateOrCreate(
+                ["user_id" => $userId, "totk_armor_id" => $newTracking["armor_id"]],
                 [
                     "tracking" => $newTracking["tracking"],
                     "tracking_tier_start" => $newTracking["tracking_tier_start"],
                     "tracking_tier_end" => $newTracking["tracking_tier_end"],
                 ],
             );
-            Cache::forget("tracking:user-$userId");
+            Cache::forget("totk_tracking:user-$userId");
             $this->getAllTracking();
         } else {
-            session(["armors.{$newTracking->get('armor_id')}" => $newTracking->toArray()]);
+            session(["totk_armors.{$newTracking->get('totk_armor_id')}" => $newTracking->toArray()]);
         }
     }
 
     private function trackingDefaults(): Collection
     {
         return Cache::rememberForever(
-            'tracking:defaults',
-            fn () => Requirement::selectRaw(
-                "armor_id, MIN(tier) AS tracking_tier_start, MAX(tier) AS tracking_tier_end, true AS tracking",
+            'totk_tracking:defaults',
+            fn () => TotkRequirement::selectRaw(
+                "totk_armor_id, MIN(tier) AS tracking_tier_start, MAX(tier) AS tracking_tier_end, true AS tracking",
             )
-                ->groupBy("armor_id")
+                ->groupBy("totk_armor_id")
                 ->get()
         );
     }
@@ -114,12 +114,12 @@ class TrackingService
     private function formattedDefaults(): Collection
     {
         return Cache::rememberForever(
-            'tracking:formatted',
+            'totk_tracking:formatted',
             fn () => $this->trackingDefaults()->mapWithKeys(function (
                 $default,
             ) {
                 return [
-                    $default->armor_id => $default,
+                    $default->totk_armor_id => $default,
                 ];
             })
         );
@@ -134,16 +134,16 @@ class TrackingService
     private function populateTrackingDb(int $userId): void
     {
         $dbRequirements = Cache::remember(
-            "tracking:user-$userId",
+            "totk_tracking:user-$userId",
             24 * 60 * 60,
             fn () => $this->trackingDefaults()->toArray()
         );
         foreach ($dbRequirements as &$requirement) {
             $requirement["user_id"] = $userId;
         }
-        Track::upsert(
+        TotkTrack::upsert(
             $dbRequirements,
-            ["user_id", "armor_id"],
+            ["user_id", "totk_armor_id"],
             ["tracking", "tracking_tier_start", "tracking_tier_end"],
         );
     }
@@ -153,13 +153,13 @@ class TrackingService
      */
     private function copyTrackingData(int $userId): void
     {
-        $sessionData = session("armors", $this->formattedDefaults()->toArray());
+        $sessionData = session("totk_armors", $this->formattedDefaults()->toArray());
         foreach ($sessionData as &$sessionDatum) {
             $sessionDatum["user_id"] = $userId;
         }
-        Track::upsert(
+        TotkTrack::upsert(
             $sessionData,
-            ["user_id", "armor_id"],
+            ["user_id", "totk_armor_id"],
             ["tracking", "tracking_tier_start", "tracking_tier_end"],
         );
     }
